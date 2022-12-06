@@ -1,10 +1,9 @@
-package com.appMundial.lista2026.service;
+package com.appMundial.lista2026.service.jugador;
 
 
-import com.appMundial.lista2026.dto.JugadorDto;
-import com.appMundial.lista2026.entity.Jugador;
-import com.appMundial.lista2026.exception.ResourceNotFoundException;
-import com.appMundial.lista2026.repository.JugadorRepository;
+import com.appMundial.lista2026.dto.jugador.JugadorDto;
+import com.appMundial.lista2026.entity.jugador.Jugador;
+import com.appMundial.lista2026.repository.jugador.JugadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +36,11 @@ public class JugadorService {
 
     public List<Jugador> listAllJugadores() {
         return jugadorRepository.findAll();
+    }
+
+
+    public void deleteAllJugadoresExistentes() {
+        jugadorRepository.deleteAll();
     }
 
     private Jugador parseJugadorDtoToEntity(JugadorDto jugadorDto) {

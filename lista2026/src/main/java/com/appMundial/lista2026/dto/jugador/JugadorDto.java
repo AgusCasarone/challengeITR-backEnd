@@ -1,4 +1,8 @@
-package com.appMundial.lista2026.dto;
+package com.appMundial.lista2026.dto.jugador;
+
+import com.appMundial.lista2026.entity.jugador.Posicion;
+
+import java.util.List;
 
 public class JugadorDto {
 
@@ -7,7 +11,7 @@ public class JugadorDto {
     public String apellido;
     public Integer edad;
     public String equipo;
-    public String posicion;
+    public List<Posicion> posicion;
     public Integer numero;
 
     public JugadorDto() {
@@ -53,11 +57,11 @@ public class JugadorDto {
         this.equipo = equipo;
     }
 
-    public String getPosicion() {
+    public List<Posicion> getPosicion() {
         return posicion;
     }
 
-    public void setPosicion(String posicion) {
+    public void setPosicion(List<Posicion> posicion) {
         this.posicion = posicion;
     }
 

@@ -1,7 +1,8 @@
-package com.appMundial.lista2026.entity;
-
+package com.appMundial.lista2026.entity.jugador;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "jugador")
@@ -14,13 +15,16 @@ public class Jugador {
     private String apellido;
     private Integer edad;
     private String equipo;
-    private String posicion;
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "Posicion", joinColumns = @JoinColumn(name = "id"))
+    @Enumerated(EnumType.STRING)
+    private List<Posicion> posicion;
     private Integer numero;
 
     public Jugador() {
     }
 
-    public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, String posicion, Integer numero) {
+    public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -70,11 +74,11 @@ public class Jugador {
         this.equipo = equipo;
     }
 
-    public String getPosicion() {
+    public List<Posicion> getPosicion() {
         return posicion;
     }
 
-    public void setPosicion(String posicion) {
+    public void setPosicion(List<Posicion> posicion) {
         this.posicion = posicion;
     }
 

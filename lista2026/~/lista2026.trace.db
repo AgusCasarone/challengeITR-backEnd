@@ -16420,3 +16420,21 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.base/java.nio.channels.FileChannel.tryLock(FileChannel.java:1191)
 	at org.h2.mvstore.FileStore.open(FileStore.java:169)
 	... 21 more
+2022-12-06 06:54:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
+2022-12-06 06:56:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
+2022-12-06 06:56:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
+2022-12-06 06:56:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
+2022-12-06 07:06:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
+2022-12-06 07:07:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "delantero"
+Data conversion error converting "delantero" [22018-214]
