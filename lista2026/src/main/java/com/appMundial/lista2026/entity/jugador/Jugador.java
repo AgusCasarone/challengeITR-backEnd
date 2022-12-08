@@ -1,5 +1,7 @@
 package com.appMundial.lista2026.entity.jugador;
 
+import com.appMundial.lista2026.entity.lista.Lista;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -15,13 +17,33 @@ public class Jugador {
     private String apellido;
     private Integer edad;
     private String equipo;
-    @ElementCollection(fetch = FetchType.EAGER)
+    @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "Posicion", joinColumns = @JoinColumn(name = "id"))
     @Enumerated(EnumType.STRING)
     private List<Posicion> posicion;
     private Integer numero;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "tabla_id",
+            joinColumns = @JoinColumn(name = "id_jugador"),
+            inverseJoinColumns = @JoinColumn(name = "id_lista")
+    )
+    @JsonIgnore
+    private List<Lista> listas;
+
 
     public Jugador() {
+    }
+
+    public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero, List<Lista> listas) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.equipo = equipo;
+        this.posicion = posicion;
+        this.numero = numero;
+        this.listas = listas;
     }
 
     public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero) {
@@ -88,5 +110,13 @@ public class Jugador {
 
     public void setNumero(Integer numero) {
         this.numero = numero;
+    }
+
+    public List<Lista> getListas() {
+        return listas;
+    }
+
+    public void setListas(List<Lista> listas) {
+        this.listas = listas;
     }
 }

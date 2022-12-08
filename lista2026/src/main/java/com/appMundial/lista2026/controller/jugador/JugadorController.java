@@ -5,6 +5,7 @@ import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.exception.MissingValuesException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.jugador.JugadorService;
+import com.appMundial.lista2026.service.jugador.impl.JugadorServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,8 @@ public class JugadorController {
     private static final Logger LOGGER = LogManager.getLogger(JugadorController.class);
 
     @Autowired
-    private JugadorService jugadorService;
+    private JugadorServiceImpl jugadorService;
 
-    // Create
     @PostMapping
     public ResponseEntity<JugadorDto> addJugador(@RequestBody JugadorDto jugadorDto) throws MissingValuesException, Exception {
         LOGGER.info(String.format("Se creó un nuevo jugador:" +
@@ -37,22 +37,18 @@ public class JugadorController {
         return ResponseEntity.ok(jugadorService.parseJugadorEntityToDto(jugadorService.addJugador(jugadorDto)));
     }
 
-    // Read
     @GetMapping(value = {"/{id}"})
     public ResponseEntity<Optional<Jugador>> findJugadorById(@PathVariable Integer id) throws ResourceNotFoundException, Exception {
         LOGGER.info(String.format("Se encontró el jugador con id %s ", id));
         return ResponseEntity.ok(jugadorService.findJugadorById(id));
     }
 
-    // Update
     @PutMapping (value = "/{id}")
     public ResponseEntity<Jugador> updateJugador(@PathVariable Integer id, @RequestBody JugadorDto jugadorDto) throws MissingValuesException, Exception {
         LOGGER.info(String.format("Se actualizó el jugador con id %s", id));
-        jugadorDto.setId(id);
-        return ResponseEntity.ok(jugadorService.addJugador(jugadorDto));
+        return ResponseEntity.ok(jugadorService.updateJugador(jugadorDto, id));
     }
 
-    // Delete
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteJugador(@PathVariable Integer id) throws ResourceNotFoundException, Exception {
         LOGGER.info(String.format("Se eliminó el jugador con id %s", id));
@@ -68,7 +64,7 @@ public class JugadorController {
     @DeleteMapping("/deleteAll")
     public ResponseEntity<String> deleteAllJugadoresExistentes() throws ResourceNotFoundException, Exception {
         jugadorService.deleteAllJugadoresExistentes();
-        return ResponseEntity.status(HttpStatus.OK).body(String.format("Se eliminaron todos los jugadores"));
+        return ResponseEntity.status(HttpStatus.OK).body("Se eliminaron todos los jugadores");
     }
 
 }
