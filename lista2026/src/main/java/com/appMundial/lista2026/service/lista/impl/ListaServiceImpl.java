@@ -77,14 +77,15 @@ public class ListaServiceImpl {
 
         Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
 
-        long cantidadArqueros = lista.getJugadores().stream().filter(j -> j.getPosicion().equals(Posicion.ARQUERO)).count();
-
-        if (cantidadArqueros == 2 && lista.getJugadores().size() == 23) {
+        if (amountOfArquerosInLista(idLista) == 2 && amountOfJugadoresInLista(idLista) == 23) {
             lista.setEstado(Estado.DEFINITIVA);
             listaRepository.save(lista);
+            LOGGER.info(String.format("Se cambió el estado de la lista con id %s", idLista));
+            return lista;
+        } else {
+            LOGGER.info(String.format("La lista %s no puede ser DEFINITIVA porque no cumple las condiciones.", idLista));
+            return lista;
         }
-        LOGGER.info(String.format("Se cambió el estado de la lista con id %s", idLista));
-        return lista;
     }
 
     public Long amountOfJugadoresInLista(Integer idLista) throws ResourceNotFoundException {
@@ -92,6 +93,13 @@ public class ListaServiceImpl {
         Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
 
         return lista.getJugadores().stream().count();
+    }
+
+    public Long amountOfArquerosInLista(Integer idLista) throws ResourceNotFoundException {
+        Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
+
+        return lista.getJugadores().stream().filter(j -> j.getPosicion().equals(Posicion.ARQUERO)).count();
+
     }
 
     public Lista paseListaDtoToEntity(ListaDto listaDto){
