@@ -117,7 +117,7 @@ public class ListaServiceImpl implements ListaService {
 
         Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
 
-        return lista.getJugadores().stream().count();
+        return (long) lista.getJugadores().size();
     }
 
     @Override
@@ -160,6 +160,24 @@ public class ListaServiceImpl implements ListaService {
 
 
         return isTwoOfEach;
+    }
+
+    public boolean sequenceOfTwentythreeJugadorNumero(Integer id) {
+
+        boolean hasAllNumbers = false;
+
+        Lista lista = (listaRepository.getById(id)).;
+
+        for (Jugador j : lista.getJugadores()) {
+            if (j.getNumero() > 23){
+                LOGGER.error(String.format("Hay al menos un jugador con un número mayor a 23."));
+                return hasAllNumbers;
+            } else if (j.getNumero()) {
+                
+            }
+        }
+
+        return hasAllNumbers;
     }
 
     @Override
