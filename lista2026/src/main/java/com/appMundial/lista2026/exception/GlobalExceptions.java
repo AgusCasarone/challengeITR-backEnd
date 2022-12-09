@@ -23,4 +23,12 @@ public class GlobalExceptions {
         LOGGER.error("Faltan valores en el cuerpo de la request.");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
     }
+
+    @ExceptionHandler({ListaDeJugadoresAlreadyExistsException.class})
+    public ResponseEntity<String> procesoListaDeJugadoresAlreadyExistsException(ListaDeJugadoresAlreadyExistsException e) {
+        LOGGER.error("Sólo puede existir una lista, así que no se pudo crear una nueva.");
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+    }
+
+
 }

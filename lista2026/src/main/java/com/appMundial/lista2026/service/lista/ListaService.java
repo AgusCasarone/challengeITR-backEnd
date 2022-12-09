@@ -3,6 +3,7 @@ package com.appMundial.lista2026.service.lista;
 import com.appMundial.lista2026.dto.lista.ListaDto;
 import com.appMundial.lista2026.entity.jugador.Posicion;
 import com.appMundial.lista2026.entity.lista.Lista;
+import com.appMundial.lista2026.exception.ListaDeJugadoresAlreadyExistsException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.Optional;
 
 public interface ListaService {
 
-    public Lista addLista(ListaDto listaDto);
+    public Lista addLista(ListaDto listaDto) throws ListaDeJugadoresAlreadyExistsException;
 
     public Optional<Lista> findListaById(Integer id);
 
@@ -28,7 +29,7 @@ public interface ListaService {
 
     public Long amountOfSamePositionInLista(Integer idLista, Posicion posicion) throws ResourceNotFoundException;
 
-    public boolean atLeastOneOfEach(Integer idLista) throws ResourceNotFoundException;
+    public boolean atLeastTwoOfEach(Integer idLista) throws ResourceNotFoundException;
 
     public Lista paseListaDtoToEntity(ListaDto listaDto);
 

@@ -5,6 +5,7 @@ import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.entity.jugador.Posicion;
 import com.appMundial.lista2026.entity.lista.Estado;
 import com.appMundial.lista2026.entity.lista.Lista;
+import com.appMundial.lista2026.exception.ListaDeJugadoresAlreadyExistsException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.repository.lista.ListaRepository;
 import com.appMundial.lista2026.service.jugador.impl.JugadorServiceImpl;
@@ -14,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,11 +31,20 @@ public class ListaServiceImpl implements ListaService {
     private JugadorServiceImpl jugadorRepository;
 
     @Override
-    public Lista addLista(ListaDto listaDto) {
+    public Lista addLista(ListaDto listaDto) throws ListaDeJugadoresAlreadyExistsException {
         Lista listaEntity = paseListaDtoToEntity(listaDto);
+
+        // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE LISTA TO BE CREATED
+        if (listaRepository.findAll().size() > 0) {
+            ListaDeJugadoresAlreadyExistsException e = new ListaDeJugadoresAlreadyExistsException("Ya hay una lista en la base de datos");
+            throw e;
+        }
+
         listaEntity.setEstado(Estado.ENPROCESO);
+
         LOGGER.info("Se creó una nueva lista");
         return listaRepository.save(listaEntity);
+
     }
 
     @Override
@@ -84,11 +95,7 @@ public class ListaServiceImpl implements ListaService {
 
         Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
 
-        if (amountOfJugadoresInLista(idLista) == 23
-                && amountOfSamePositionInLista(idLista, Posicion.ARQUERO) == 2
-                && amountOfSamePositionInLista(idLista, Posicion.DEFENSOR) >= 2
-                && amountOfSamePositionInLista(idLista, Posicion.VOLANTE) >= 2
-                && amountOfSamePositionInLista(idLista, Posicion.DELANTERO) >= 2) {
+        if (amountOfJugadoresInLista(idLista) == 23 && atLeastTwoOfEach(idLista)) {
 
             lista.setEstado(Estado.DEFINITIVA);
 
@@ -122,13 +129,37 @@ public class ListaServiceImpl implements ListaService {
     }
 
     @Override
-    public boolean atLeastOneOfEach(Integer idLista) throws ResourceNotFoundException {
+    public boolean atLeastTwoOfEach(Integer idLista) throws ResourceNotFoundException {
 
         Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
 
+        List<String> missingConditions = new ArrayList<>();
+        boolean isTwoOfEach = true;
+
+        if (amountOfSamePositionInLista(idLista, Posicion.ARQUERO) > 2) {
+            missingConditions.add(" arqueros ");
+            isTwoOfEach = false;
+        }
+
+        if (amountOfSamePositionInLista(idLista, Posicion.DEFENSOR) > 2) {
+            missingConditions.add(" defensores ");
+            isTwoOfEach = false;
+        }
+        if (amountOfSamePositionInLista(idLista, Posicion.VOLANTE) > 2) {
+            missingConditions.add(" volantes ");
+            isTwoOfEach = false;
+        }
+        if (amountOfSamePositionInLista(idLista, Posicion.DELANTERO) > 2) {
+            missingConditions.add(" delanteros ");
+            isTwoOfEach = false;
+        }
+
+        if (!isTwoOfEach) {
+            LOGGER.error(String.format("Debería haber al menos 2 jugadores de cada tipo y no hay suficientes %s", missingConditions));
+        }
 
 
-        return false;
+        return isTwoOfEach;
     }
 
     @Override

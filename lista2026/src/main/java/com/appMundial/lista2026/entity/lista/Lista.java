@@ -11,7 +11,7 @@ import java.util.Set;
 public class Lista {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @CollectionTable(name = "Estado", joinColumns = @JoinColumn(name = "id"))
     @Enumerated(EnumType.STRING)

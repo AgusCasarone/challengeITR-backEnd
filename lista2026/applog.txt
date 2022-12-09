@@ -1,1178 +1,237 @@
-2022-12-08T17:36:25.429-03:00  INFO 5572 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 5572 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T17:36:25.444-03:00  INFO 5572 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T17:36:27.097-03:00  INFO 5572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T17:36:27.214-03:00  INFO 5572 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
-2022-12-08T17:36:28.545-03:00  INFO 5572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T17:36:28.563-03:00  INFO 5572 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T17:36:28.564-03:00  INFO 5572 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T17:36:28.767-03:00  INFO 5572 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T17:36:28.768-03:00  INFO 5572 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3192 ms
-2022-12-08T17:36:29.054-03:00  INFO 5572 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T17:36:29.240-03:00  INFO 5572 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T17:36:29.922-03:00  WARN 5572 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T17:36:30.378-03:00  INFO 5572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T17:36:31.224-03:00  INFO 5572 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T17:36:31.229-03:00  INFO 5572 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T17:36:31.355-03:00  INFO 5572 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T17:36:33.148-03:00  INFO 5572 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T17:36:33.158-03:00  INFO 5572 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:36:34.433-03:00  WARN 5572 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T17:36:35.117-03:00  WARN 5572 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T17:36:35.584-03:00  INFO 5572 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T17:36:35.668-03:00  INFO 5572 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 11.002 seconds (process running for 12.28)
-2022-12-08T17:37:39.417-03:00  INFO 5572 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T17:37:39.418-03:00  INFO 5572 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T17:37:39.422-03:00  INFO 5572 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-12-08T17:37:39.643-03:00  WARN 5572 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.appMundial.lista2026.entity.jugador.Posicion>` from String value (token `JsonToken.VALUE_STRING`)]
-2022-12-08T17:38:59.162-03:00  INFO 5572 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T17:38:59.227-03:00  WARN 5572 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23502, SQLState: 23502
-2022-12-08T17:38:59.237-03:00 ERROR 5572 --- [http-nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-2022-12-08T17:38:59.267-03:00 ERROR 5572 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]] with root cause
-
-org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:365) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Table.convertInsertRow(Table.java:926) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.insertRows(Insert.java:167) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:242) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:163) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3288) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3898) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:307) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:610) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy116.save(Unknown Source) ~[na:na]
-	at com.appMundial.lista2026.service.jugador.JugadorService.addJugador(JugadorService.java:22) ~[classes/:na]
-	at com.appMundial.lista2026.controller.jugador.JugadorController.addJugador(JugadorController.java:36) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-12-08T17:39:25.725-03:00  WARN 5572 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.ArrayList<com.appMundial.lista2026.entity.jugador.Posicion>` from Object value (token `JsonToken.START_OBJECT`)]
-2022-12-08T17:40:05.905-03:00  INFO 5572 --- [http-nio-8080-exec-9] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T17:40:05.907-03:00  WARN 5572 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23502, SQLState: 23502
-2022-12-08T17:40:05.907-03:00 ERROR 5572 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-2022-12-08T17:40:05.908-03:00 ERROR 5572 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]] with root cause
-
-org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:365) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Table.convertInsertRow(Table.java:926) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.insertRows(Insert.java:167) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:242) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:163) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3288) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3898) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:307) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:610) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy116.save(Unknown Source) ~[na:na]
-	at com.appMundial.lista2026.service.jugador.JugadorService.addJugador(JugadorService.java:22) ~[classes/:na]
-	at com.appMundial.lista2026.controller.jugador.JugadorController.addJugador(JugadorController.java:36) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-12-08T17:44:47.031-03:00  INFO 5572 --- [http-nio-8080-exec-1] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T17:44:47.033-03:00  WARN 5572 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23502, SQLState: 23502
-2022-12-08T17:44:47.034-03:00 ERROR 5572 --- [http-nio-8080-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-2022-12-08T17:44:47.035-03:00 ERROR 5572 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]] with root cause
-
-org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: La columna "ID" no permite valores nulos (NULL)
-NULL not allowed for column "ID"; SQL statement:
-insert into jugador (id, apellido, edad, equipo, nombre, numero) values (default, ?, ?, ?, ?, ?) [23502-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:365) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.table.Table.convertInsertRow(Table.java:926) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.insertRows(Insert.java:167) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:242) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.CommandContainer.update(CommandContainer.java:163) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209) ~[h2-2.1.214.jar:2.1.214]
-	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169) ~[h2-2.1.214.jar:2.1.214]
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3288) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3898) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:80) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:653) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:283) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:264) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:340) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:286) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:192) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:122) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:184) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:129) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:53) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:735) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:719) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:307) ~[spring-orm-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source) ~[na:na]
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:610) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:163) ~[spring-data-jpa-3.0.0.jar:3.0.0]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.2.jar:6.0.2]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.2.jar:6.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy116.save(Unknown Source) ~[na:na]
-	at com.appMundial.lista2026.service.jugador.JugadorService.addJugador(JugadorService.java:22) ~[classes/:na]
-	at com.appMundial.lista2026.controller.jugador.JugadorController.addJugador(JugadorController.java:36) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-6.0.2.jar:6.0.2]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.1.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-12-08T17:46:14.838-03:00  INFO 5572 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:46:14.849-03:00  INFO 5572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T17:46:14.857-03:00  INFO 5572 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T17:46:27.161-03:00  INFO 16908 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 16908 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T17:46:27.165-03:00  INFO 16908 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T17:46:28.347-03:00  INFO 16908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T17:46:28.456-03:00  INFO 16908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
-2022-12-08T17:46:29.357-03:00  INFO 16908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T17:46:29.376-03:00  INFO 16908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T17:46:29.377-03:00  INFO 16908 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T17:46:29.541-03:00  INFO 16908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T17:46:29.542-03:00  INFO 16908 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2266 ms
-2022-12-08T17:46:29.838-03:00  INFO 16908 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T17:46:29.947-03:00  INFO 16908 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T17:46:30.209-03:00  WARN 16908 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T17:46:30.385-03:00  INFO 16908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T17:46:30.763-03:00  INFO 16908 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T17:46:30.766-03:00  INFO 16908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T17:46:30.812-03:00  INFO 16908 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T17:46:31.951-03:00  INFO 16908 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T17:46:31.962-03:00  INFO 16908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:46:32.469-03:00  WARN 16908 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T17:46:32.873-03:00  WARN 16908 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T17:46:33.007-03:00  INFO 16908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T17:46:33.017-03:00  INFO 16908 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 6.632 seconds (process running for 7.552)
-2022-12-08T17:46:49.244-03:00  INFO 16908 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T17:46:49.246-03:00  INFO 16908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T17:46:49.254-03:00  INFO 16908 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-12-08T17:46:49.465-03:00  INFO 16908 --- [http-nio-8080-exec-2] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T17:50:31.594-03:00  INFO 16908 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se creó una nueva lista porque no existía una anterior
-2022-12-08T17:52:10.744-03:00  WARN 16908 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2022-12-08T17:52:17.753-03:00  WARN 16908 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
-2022-12-08T17:52:53.304-03:00  WARN 16908 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'idLista' for method parameter type Integer is not present]
-2022-12-08T17:53:47.002-03:00  WARN 16908 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingPathVariableException: Required URI template variable 'idLista' for method parameter type Integer is not present]
-2022-12-08T17:54:26.962-03:00  INFO 16908 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:54:26.968-03:00  INFO 16908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T17:54:26.975-03:00  INFO 16908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T17:54:33.684-03:00  INFO 2588 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 2588 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T17:54:33.687-03:00  INFO 2588 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T17:54:34.986-03:00  INFO 2588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T17:54:35.129-03:00  INFO 2588 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
-2022-12-08T17:54:36.674-03:00  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T17:54:36.706-03:00  INFO 2588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T17:54:36.707-03:00  INFO 2588 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T17:54:37.078-03:00  INFO 2588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T17:54:37.081-03:00  INFO 2588 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3268 ms
-2022-12-08T17:54:37.444-03:00  INFO 2588 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T17:54:37.644-03:00  INFO 2588 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T17:54:37.908-03:00  WARN 2588 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T17:54:38.075-03:00  INFO 2588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T17:54:38.402-03:00  INFO 2588 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T17:54:38.406-03:00  INFO 2588 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T17:54:38.453-03:00  INFO 2588 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T17:54:39.544-03:00  INFO 2588 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T17:54:39.553-03:00  INFO 2588 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:54:40.073-03:00  WARN 2588 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T17:54:40.645-03:00  WARN 2588 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T17:54:40.827-03:00  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T17:54:40.843-03:00  INFO 2588 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.863 seconds (process running for 8.503)
-2022-12-08T17:54:50.002-03:00  INFO 2588 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T17:54:50.002-03:00  INFO 2588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T17:54:50.004-03:00  INFO 2588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T17:54:50.083-03:00  INFO 2588 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 6 a la lista con id 1 
-2022-12-08T17:54:58.860-03:00  INFO 2588 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T17:56:12.324-03:00  INFO 2588 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T17:56:12.328-03:00  INFO 2588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T17:56:12.335-03:00  INFO 2588 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T18:14:46.477-03:00  INFO 8536 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 8536 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T18:14:46.481-03:00  INFO 8536 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T18:14:47.854-03:00  INFO 8536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T18:14:47.991-03:00  INFO 8536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
-2022-12-08T18:14:49.034-03:00  INFO 8536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T18:14:49.051-03:00  INFO 8536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T18:14:49.051-03:00  INFO 8536 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T18:14:49.212-03:00  INFO 8536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T18:14:49.213-03:00  INFO 8536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2593 ms
-2022-12-08T18:14:49.501-03:00  INFO 8536 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T18:14:49.567-03:00  INFO 8536 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T18:14:49.821-03:00  WARN 8536 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T18:14:49.997-03:00  INFO 8536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T18:14:50.368-03:00  INFO 8536 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T18:14:50.371-03:00  INFO 8536 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T18:14:50.429-03:00  INFO 8536 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T18:14:51.777-03:00  INFO 8536 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T18:14:51.786-03:00  INFO 8536 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T18:14:52.444-03:00  WARN 8536 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T18:14:52.908-03:00  WARN 8536 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T18:14:53.067-03:00  INFO 8536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T18:14:53.077-03:00  INFO 8536 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.399 seconds (process running for 9.142)
-2022-12-08T18:16:17.488-03:00  INFO 8536 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T18:16:17.489-03:00  INFO 8536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T18:16:17.495-03:00  INFO 8536 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-12-08T18:18:58.119-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se creó una nueva lista porque no existía una anterior
-2022-12-08T18:19:54.572-03:00  INFO 8536 --- [http-nio-8080-exec-5] c.a.l.service.lista.ListaService         : Se cambió el estado de la lista con id 1
-2022-12-08T18:20:27.944-03:00  INFO 8536 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:28.365-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:29.127-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:29.898-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:30.680-03:00  INFO 8536 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:31.471-03:00  INFO 8536 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:32.165-03:00  INFO 8536 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:32.870-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:33.638-03:00  INFO 8536 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:34.315-03:00  INFO 8536 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:35.033-03:00  INFO 8536 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:35.689-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:36.439-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:37.020-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:37.696-03:00  INFO 8536 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:38.432-03:00  INFO 8536 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:39.166-03:00  INFO 8536 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:20:40.051-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 7 a la lista con id 1 
-2022-12-08T18:21:02.261-03:00  INFO 8536 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 8 a la lista con id 1 
-2022-12-08T18:21:12.039-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:12.543-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:12.989-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:13.474-03:00  INFO 8536 --- [http-nio-8080-exec-10] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:13.893-03:00  INFO 8536 --- [http-nio-8080-exec-2] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:14.328-03:00  INFO 8536 --- [http-nio-8080-exec-1] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:14.742-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:15.217-03:00  INFO 8536 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:15.702-03:00  INFO 8536 --- [http-nio-8080-exec-5] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:16.134-03:00  INFO 8536 --- [http-nio-8080-exec-6] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:16.525-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:16.917-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:17.312-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:17.761-03:00  INFO 8536 --- [http-nio-8080-exec-10] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:18.190-03:00  INFO 8536 --- [http-nio-8080-exec-2] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:18.597-03:00  INFO 8536 --- [http-nio-8080-exec-1] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:18.991-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:19.382-03:00  INFO 8536 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:19.797-03:00  INFO 8536 --- [http-nio-8080-exec-5] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:20.206-03:00  INFO 8536 --- [http-nio-8080-exec-6] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:20.662-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:21.101-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:21.527-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:27.227-03:00  INFO 8536 --- [http-nio-8080-exec-10] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [ARQUERO] 
- Numero: 165 
-2022-12-08T18:21:29.372-03:00  INFO 8536 --- [http-nio-8080-exec-2] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [ARQUERO] 
- Numero: 165 
-2022-12-08T18:21:34.374-03:00  INFO 8536 --- [http-nio-8080-exec-1] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:34.766-03:00  INFO 8536 --- [http-nio-8080-exec-3] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:35.195-03:00  INFO 8536 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:35.679-03:00  INFO 8536 --- [http-nio-8080-exec-5] c.a.l.c.jugador.JugadorController        : Se creó un nuevo jugador:
- Nombre: Lautaro  
- Apellido: Martinez  
- Edad: 25 
- Equipo: Inter 
- Posicion: [DELANTERO] 
- Numero: 165 
-2022-12-08T18:21:50.679-03:00  INFO 8536 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 10 a la lista con id 1 
-2022-12-08T18:22:16.155-03:00  INFO 8536 --- [http-nio-8080-exec-8] c.a.l.controller.lista.ListaController   : Se agregó el jugador 225 a la lista con id 1 
-2022-12-08T18:22:20.442-03:00  INFO 8536 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 226 a la lista con id 1 
-2022-12-08T18:28:37.581-03:00  INFO 8536 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T18:28:37.585-03:00  INFO 8536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T18:28:37.588-03:00  INFO 8536 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T18:34:43.872-03:00  INFO 15052 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 15052 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T18:34:43.875-03:00  INFO 15052 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T18:34:44.891-03:00  INFO 15052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T18:34:45.006-03:00  INFO 15052 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
-2022-12-08T18:34:45.957-03:00  INFO 15052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T18:34:45.970-03:00  INFO 15052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T18:34:45.970-03:00  INFO 15052 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T18:34:46.108-03:00  INFO 15052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T18:34:46.108-03:00  INFO 15052 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2148 ms
-2022-12-08T18:34:46.489-03:00  INFO 15052 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T18:34:46.555-03:00  INFO 15052 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T18:34:46.767-03:00  WARN 15052 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T18:34:46.903-03:00  INFO 15052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T18:34:47.221-03:00  INFO 15052 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T18:34:47.225-03:00  INFO 15052 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T18:34:47.273-03:00  INFO 15052 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T18:34:48.402-03:00  INFO 15052 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T18:34:48.415-03:00  INFO 15052 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T18:34:48.935-03:00  WARN 15052 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T18:34:49.330-03:00  WARN 15052 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T18:34:49.452-03:00  INFO 15052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T18:34:49.464-03:00  INFO 15052 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 6.225 seconds (process running for 6.772)
-2022-12-08T18:35:02.232-03:00  INFO 15052 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T18:35:02.233-03:00  INFO 15052 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T18:35:02.235-03:00  INFO 15052 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T18:35:24.080-03:00  INFO 15052 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 226 a la lista con id 1 
-2022-12-08T18:35:37.946-03:00  INFO 15052 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se creó una nueva lista porque no existía una anterior
-2022-12-08T18:36:19.098-03:00  INFO 15052 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T18:36:19.100-03:00  INFO 15052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T18:36:19.103-03:00  INFO 15052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T18:36:25.576-03:00  INFO 8156 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 8156 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T18:36:25.580-03:00  INFO 8156 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T18:36:26.860-03:00  INFO 8156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T18:36:27.004-03:00  INFO 8156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 2 JPA repository interfaces.
-2022-12-08T18:36:28.743-03:00  INFO 8156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T18:36:28.773-03:00  INFO 8156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T18:36:28.779-03:00  INFO 8156 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T18:36:29.051-03:00  INFO 8156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T18:36:29.052-03:00  INFO 8156 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3392 ms
-2022-12-08T18:36:29.576-03:00  INFO 8156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T18:36:29.678-03:00  INFO 8156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T18:36:29.960-03:00  WARN 8156 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T18:36:30.121-03:00  INFO 8156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T18:36:30.557-03:00  INFO 8156 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T18:36:30.559-03:00  INFO 8156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T18:36:30.607-03:00  INFO 8156 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T18:36:31.848-03:00  INFO 8156 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T18:36:31.860-03:00  INFO 8156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T18:36:32.486-03:00  WARN 8156 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T18:36:33.008-03:00  WARN 8156 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T18:36:33.187-03:00  INFO 8156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T18:36:33.201-03:00  INFO 8156 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 8.268 seconds (process running for 8.962)
-2022-12-08T18:37:15.146-03:00  INFO 8156 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T18:37:15.146-03:00  INFO 8156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T18:37:15.148-03:00  INFO 8156 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-12-08T18:37:56.057-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 227 a la lista con id 1 
-2022-12-08T18:37:58.813-03:00  INFO 8156 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 228 a la lista con id 1 
-2022-12-08T18:38:03.149-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 229 a la lista con id 1 
-2022-12-08T18:38:05.855-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 230 a la lista con id 1 
-2022-12-08T18:38:09.086-03:00  INFO 8156 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 231 a la lista con id 1 
-2022-12-08T18:38:09.092-03:00 ERROR 8156 --- [http-nio-8080-exec-7] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T18:39:55.331-03:00  INFO 8156 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 202 a la lista con id 1 
-2022-12-08T18:39:57.204-03:00  INFO 8156 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 20 a la lista con id 1 
-2022-12-08T18:39:57.206-03:00 ERROR 8156 --- [http-nio-8080-exec-2] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T18:40:00.548-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:03.152-03:00  INFO 8156 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:06.271-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:07.218-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:09.662-03:00  INFO 8156 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:10.511-03:00  INFO 8156 --- [http-nio-8080-exec-8] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:11.593-03:00  INFO 8156 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:13.607-03:00  INFO 8156 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 1 
-2022-12-08T18:40:59.375-03:00  INFO 8156 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 204 a la lista con id 1 
-2022-12-08T18:41:03.416-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 205 a la lista con id 1 
-2022-12-08T18:41:04.955-03:00  INFO 8156 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 206 a la lista con id 1 
-2022-12-08T18:41:06.699-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 207 a la lista con id 1 
-2022-12-08T18:41:08.111-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 208 a la lista con id 1 
-2022-12-08T18:41:09.406-03:00  INFO 8156 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 209 a la lista con id 1 
-2022-12-08T18:41:44.947-03:00  INFO 8156 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 210 a la lista con id 1 
-2022-12-08T18:41:46.041-03:00  INFO 8156 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 211 a la lista con id 1 
-2022-12-08T18:41:48.697-03:00  INFO 8156 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 212 a la lista con id 1 
-2022-12-08T18:41:49.632-03:00  INFO 8156 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 213 a la lista con id 1 
-2022-12-08T18:41:51.431-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 214 a la lista con id 1 
-2022-12-08T18:42:03.606-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 1
-2022-12-08T18:42:44.132-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 1
-2022-12-08T18:45:34.718-03:00  INFO 8156 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 214 a la lista con id 2 
-2022-12-08T18:45:39.716-03:00  INFO 8156 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 214 a la lista con id 2 
-2022-12-08T18:46:42.964-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 213 a la lista con id 2 
-2022-12-08T18:46:44.797-03:00  INFO 8156 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 21 a la lista con id 2 
-2022-12-08T18:46:44.799-03:00 ERROR 8156 --- [http-nio-8080-exec-4] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T18:46:47.836-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 212 a la lista con id 2 
-2022-12-08T18:46:49.282-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 211 a la lista con id 2 
-2022-12-08T18:46:50.310-03:00  INFO 8156 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se agregó el jugador 210 a la lista con id 2 
-2022-12-08T18:46:52.441-03:00  INFO 8156 --- [http-nio-8080-exec-8] c.a.l.controller.lista.ListaController   : Se agregó el jugador 209 a la lista con id 2 
-2022-12-08T18:46:54.208-03:00  INFO 8156 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se agregó el jugador 208 a la lista con id 2 
-2022-12-08T18:46:55.496-03:00  INFO 8156 --- [http-nio-8080-exec-10] c.a.l.controller.lista.ListaController   : Se agregó el jugador 207 a la lista con id 2 
-2022-12-08T18:46:56.697-03:00  INFO 8156 --- [http-nio-8080-exec-1] c.a.l.controller.lista.ListaController   : Se agregó el jugador 206 a la lista con id 2 
-2022-12-08T18:46:58.596-03:00  INFO 8156 --- [http-nio-8080-exec-2] c.a.l.controller.lista.ListaController   : Se agregó el jugador 205 a la lista con id 2 
-2022-12-08T18:46:59.818-03:00  INFO 8156 --- [http-nio-8080-exec-3] c.a.l.controller.lista.ListaController   : Se agregó el jugador 204 a la lista con id 2 
-2022-12-08T18:47:00.914-03:00  INFO 8156 --- [http-nio-8080-exec-4] c.a.l.controller.lista.ListaController   : Se agregó el jugador 203 a la lista con id 2 
-2022-12-08T18:47:01.987-03:00  INFO 8156 --- [http-nio-8080-exec-5] c.a.l.controller.lista.ListaController   : Se agregó el jugador 202 a la lista con id 2 
-2022-12-08T18:47:02.927-03:00  INFO 8156 --- [http-nio-8080-exec-6] c.a.l.controller.lista.ListaController   : Se agregó el jugador 201 a la lista con id 2 
-2022-12-08T18:47:02.930-03:00 ERROR 8156 --- [http-nio-8080-exec-6] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T18:47:47.000-03:00  INFO 8156 --- [http-nio-8080-exec-7] c.a.l.controller.lista.ListaController   : Se encontró la lista con id 2 
-2022-12-08T18:49:25.141-03:00  INFO 8156 --- [http-nio-8080-exec-9] c.a.l.controller.lista.ListaController   : Se encontró la lista con id 2 
-2022-12-08T19:01:08.385-03:00  INFO 8156 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:01:08.391-03:00  INFO 8156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T19:01:08.398-03:00  INFO 8156 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T19:01:22.467-03:00  INFO 12960 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 12960 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T19:01:22.475-03:00  INFO 12960 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:01:24.056-03:00  INFO 12960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T19:01:24.206-03:00  INFO 12960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 2 JPA repository interfaces.
-2022-12-08T19:01:25.422-03:00  INFO 12960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:01:25.445-03:00  INFO 12960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:01:25.445-03:00  INFO 12960 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:01:25.643-03:00  INFO 12960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:01:25.644-03:00  INFO 12960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3000 ms
-2022-12-08T19:01:26.057-03:00  INFO 12960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T19:01:26.156-03:00  INFO 12960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T19:01:26.474-03:00  WARN 12960 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T19:01:26.673-03:00  INFO 12960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T19:01:27.087-03:00  INFO 12960 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T19:01:27.089-03:00  INFO 12960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T19:01:27.143-03:00  INFO 12960 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T19:01:28.578-03:00  INFO 12960 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T19:01:28.590-03:00  INFO 12960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:01:29.343-03:00  WARN 12960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T19:01:29.750-03:00  WARN 12960 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invalid mapping on handler class [com.appMundial.lista2026.controller.lista.ListaController]: public org.springframework.http.ResponseEntity com.appMundial.lista2026.controller.lista.ListaController.amountOfJugadoresInLista(java.lang.Integer) throws com.appMundial.lista2026.exception.ResourceNotFoundException,java.lang.Exception
-2022-12-08T19:01:29.752-03:00  INFO 12960 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:01:29.755-03:00  INFO 12960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T19:01:29.834-03:00  INFO 12960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T19:01:29.838-03:00  INFO 12960 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-12-08T19:01:29.890-03:00  INFO 12960 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2022-12-09T11:15:09.833-03:00  INFO 10528 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 10528 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-09T11:15:09.856-03:00  INFO 10528 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T11:15:11.040-03:00  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-09T11:15:11.165-03:00  INFO 10528 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
+2022-12-09T11:15:12.159-03:00  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T11:15:12.177-03:00  INFO 10528 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T11:15:12.177-03:00  INFO 10528 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T11:15:12.333-03:00  INFO 10528 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T11:15:12.333-03:00  INFO 10528 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2339 ms
+2022-12-09T11:15:12.614-03:00  INFO 10528 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-09T11:15:12.757-03:00  INFO 10528 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-09T11:15:13.058-03:00  WARN 10528 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-09T11:15:13.254-03:00  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-09T11:15:13.626-03:00  INFO 10528 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-09T11:15:13.630-03:00  INFO 10528 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-09T11:15:13.685-03:00  INFO 10528 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-09T11:15:14.971-03:00  INFO 10528 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-09T11:15:14.984-03:00  INFO 10528 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T11:15:15.620-03:00  WARN 10528 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-09T11:15:16.165-03:00  WARN 10528 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-09T11:15:16.326-03:00  INFO 10528 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T11:15:16.350-03:00  INFO 10528 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.246 seconds (process running for 8.912)
+2022-12-09T11:16:53.813-03:00  INFO 10528 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T11:16:53.813-03:00  INFO 10528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T11:16:53.815-03:00  INFO 10528 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T11:18:10.276-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 202
+2022-12-09T11:18:11.863-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 203
+2022-12-09T11:18:12.989-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 204
+2022-12-09T11:18:13.782-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 205
+2022-12-09T11:18:14.575-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 206
+2022-12-09T11:18:15.807-03:00  INFO 10528 --- [http-nio-8080-exec-10] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 207
+2022-12-09T11:18:16.719-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 208
+2022-12-09T11:18:18.079-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 209
+2022-12-09T11:18:19.606-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 210
+2022-12-09T11:18:20.700-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 211
+2022-12-09T11:18:21.923-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 212
+2022-12-09T11:18:23.167-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 213
+2022-12-09T11:18:24.290-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 214
+2022-12-09T11:18:25.473-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 215
+2022-12-09T11:18:26.468-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 216
+2022-12-09T11:18:27.613-03:00  INFO 10528 --- [http-nio-8080-exec-10] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 217
+2022-12-09T11:18:28.628-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 218
+2022-12-09T11:18:29.550-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 219
+2022-12-09T11:18:31.300-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 220
+2022-12-09T11:18:32.531-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 221
+2022-12-09T11:18:34.093-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 222
+2022-12-09T11:18:34.969-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 223
+2022-12-09T11:18:36.127-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 224
+2022-12-09T11:18:37.155-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 225
+2022-12-09T11:18:38.115-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 226
+2022-12-09T11:18:39.210-03:00  INFO 10528 --- [http-nio-8080-exec-10] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 227
+2022-12-09T11:18:40.237-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 228
+2022-12-09T11:18:41.068-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 229
+2022-12-09T11:18:43.992-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se actualizó el jugador con id 230
+2022-12-09T11:18:45.243-03:00 ERROR 10528 --- [http-nio-8080-exec-4] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
+2022-12-09T11:18:46.824-03:00 ERROR 10528 --- [http-nio-8080-exec-5] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
+2022-12-09T11:20:15.828-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 102 
+2022-12-09T11:21:30.921-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 224 
+2022-12-09T11:21:30.937-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 224 a la lista con id 102 
+2022-12-09T11:21:45.640-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 102 
+2022-12-09T11:21:56.576-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 225 
+2022-12-09T11:21:56.580-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 225 a la lista con id 102 
+2022-12-09T11:22:17.359-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 203 
+2022-12-09T11:22:17.365-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 203 a la lista con id 102 
+2022-12-09T11:22:19.073-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 204 
+2022-12-09T11:22:19.079-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 204 a la lista con id 102 
+2022-12-09T11:22:20.259-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 205 
+2022-12-09T11:22:20.263-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 205 a la lista con id 102 
+2022-12-09T11:22:27.823-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 206 
+2022-12-09T11:22:27.832-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 206 a la lista con id 102 
+2022-12-09T11:22:29.327-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 207 
+2022-12-09T11:22:29.332-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 207 a la lista con id 102 
+2022-12-09T11:22:30.450-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 208 
+2022-12-09T11:22:30.454-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 208 a la lista con id 102 
+2022-12-09T11:22:31.560-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 209 
+2022-12-09T11:22:31.569-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 209 a la lista con id 102 
+2022-12-09T11:22:33.195-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 210 
+2022-12-09T11:22:33.200-03:00  INFO 10528 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 210 a la lista con id 102 
+2022-12-09T11:22:34.769-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 211 
+2022-12-09T11:22:34.773-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 211 a la lista con id 102 
+2022-12-09T11:22:35.610-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 212 
+2022-12-09T11:22:35.616-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 212 a la lista con id 102 
+2022-12-09T11:22:36.561-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 213 
+2022-12-09T11:22:36.567-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 213 a la lista con id 102 
+2022-12-09T11:22:37.602-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 214 
+2022-12-09T11:22:37.610-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 214 a la lista con id 102 
+2022-12-09T11:22:38.443-03:00  INFO 10528 --- [http-nio-8080-exec-10] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 215 
+2022-12-09T11:22:38.451-03:00  INFO 10528 --- [http-nio-8080-exec-10] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 215 a la lista con id 102 
+2022-12-09T11:22:39.214-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 216 
+2022-12-09T11:22:39.220-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 216 a la lista con id 102 
+2022-12-09T11:22:40.401-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 217 
+2022-12-09T11:22:40.406-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 217 a la lista con id 102 
+2022-12-09T11:22:41.561-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 218 
+2022-12-09T11:22:41.567-03:00  INFO 10528 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 218 a la lista con id 102 
+2022-12-09T11:22:42.414-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 219 
+2022-12-09T11:22:42.419-03:00  INFO 10528 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 219 a la lista con id 102 
+2022-12-09T11:22:51.388-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 220 
+2022-12-09T11:22:51.393-03:00  INFO 10528 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 220 a la lista con id 102 
+2022-12-09T11:22:53.009-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 221 
+2022-12-09T11:22:53.017-03:00  INFO 10528 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 221 a la lista con id 102 
+2022-12-09T11:22:54.557-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 222 
+2022-12-09T11:22:54.565-03:00  INFO 10528 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 222 a la lista con id 102 
+2022-12-09T11:22:55.677-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.jugador.impl.JugadorServiceImpl  : Se encontró el jugador con id 223 
+2022-12-09T11:22:55.683-03:00  INFO 10528 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 223 a la lista con id 102 
+2022-12-09T11:23:51.555-03:00  INFO 10528 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 102
+2022-12-09T11:24:34.650-03:00  INFO 10528 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 102 
+2022-12-09T11:24:44.710-03:00  INFO 10528 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T11:24:44.713-03:00  INFO 10528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-09T11:24:44.718-03:00  INFO 10528 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-09T13:22:23.434-03:00  INFO 15432 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 15432 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-09T13:22:23.437-03:00  INFO 15432 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T13:22:24.713-03:00  INFO 15432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-09T13:22:24.855-03:00  INFO 15432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2022-12-09T13:22:26.043-03:00  INFO 15432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T13:22:26.069-03:00  INFO 15432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T13:22:26.072-03:00  INFO 15432 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T13:22:26.351-03:00  INFO 15432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T13:22:26.355-03:00  INFO 15432 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2812 ms
+2022-12-09T13:22:26.550-03:00  INFO 15432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-09T13:22:27.311-03:00  INFO 15432 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-09T13:22:27.314-03:00  INFO 15432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-09T13:22:27.585-03:00  INFO 15432 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-09T13:22:27.728-03:00  INFO 15432 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-09T13:22:28.049-03:00  WARN 15432 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-09T13:22:28.316-03:00  INFO 15432 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-09T13:22:28.648-03:00 ERROR 15432 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Association 'com.appMundial.lista2026.entity.jugador.Jugador.listas' targets an unknown entity named 'java.util.List'
+2022-12-09T13:22:28.649-03:00  WARN 15432 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'com.appMundial.lista2026.entity.jugador.Jugador.listas' targets an unknown entity named 'java.util.List'
+2022-12-09T13:22:28.651-03:00  INFO 15432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-09T13:22:28.674-03:00  INFO 15432 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-09T13:22:28.677-03:00  INFO 15432 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-12-09T13:22:28.695-03:00  INFO 15432 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2022-12-08T19:01:29.944-03:00 ERROR 12960 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2022-12-09T13:22:28.717-03:00 ERROR 15432 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Association 'com.appMundial.lista2026.entity.jugador.Jugador.listas' targets an unknown entity named 'java.util.List'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130) ~[spring-context-6.0.2.jar:6.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905) ~[spring-context-6.0.2.jar:6.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.2.jar:6.0.2]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.0.jar:3.0.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.0.jar:3.0.0]
+	at com.appMundial.lista2026.Lista2026Application.main(Lista2026Application.java:10) ~[classes/:na]
+Caused by: org.hibernate.AnnotationException: Association 'com.appMundial.lista2026.entity.jugador.Jugador.listas' targets an unknown entity named 'java.util.List'
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:97) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processEndOfQueue(InFlightMetadataCollectorImpl.java:1879) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processFkSecondPassesInOrder(InFlightMetadataCollectorImpl.java:1826) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1733) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:300) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.5.Final.jar:6.1.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.2.jar:6.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.2.jar:6.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.2.jar:6.0.2]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.2.jar:6.0.2]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.2.jar:6.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.2.jar:6.0.2]
+	... 16 common frames omitted
 
-Description:
-
-Invalid mapping pattern detected: /countJugadores/{id]
-                   ^
-Char ']' is not allowed in a captured variable name
-
-Action:
-
-Fix this pattern in your application or switch to the legacy parser implementation with 'spring.mvc.pathmatch.matching-strategy=ant_path_matcher'.
-
-2022-12-08T19:02:02.874-03:00  INFO 4328 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 4328 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T19:02:02.881-03:00  INFO 4328 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:02:04.514-03:00  INFO 4328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T19:02:04.673-03:00  INFO 4328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 2 JPA repository interfaces.
-2022-12-08T19:02:05.812-03:00  INFO 4328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:02:05.831-03:00  INFO 4328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:02:05.832-03:00  INFO 4328 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:02:06.008-03:00  INFO 4328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:02:06.009-03:00  INFO 4328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3004 ms
-2022-12-08T19:02:06.362-03:00  INFO 4328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T19:02:06.437-03:00  INFO 4328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T19:02:06.728-03:00  WARN 4328 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T19:02:06.896-03:00  INFO 4328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T19:02:07.275-03:00  INFO 4328 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T19:02:07.278-03:00  INFO 4328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T19:02:07.341-03:00  INFO 4328 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T19:02:08.663-03:00  INFO 4328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T19:02:08.676-03:00  INFO 4328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:02:09.232-03:00  WARN 4328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T19:02:09.897-03:00  WARN 4328 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T19:02:10.097-03:00  INFO 4328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T19:02:10.126-03:00  INFO 4328 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 8.126 seconds (process running for 8.97)
-2022-12-08T19:03:15.835-03:00  INFO 4328 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T19:03:15.835-03:00  INFO 4328 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T19:03:15.845-03:00  INFO 4328 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2022-12-08T19:03:25.770-03:00 ERROR 4328 --- [http-nio-8080-exec-3] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T19:03:36.043-03:00  INFO 4328 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 2 
-2022-12-08T19:03:48.488-03:00  INFO 4328 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 215 a la lista con id 2 
-2022-12-08T19:03:50.733-03:00  INFO 4328 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 216 a la lista con id 2 
-2022-12-08T19:03:52.381-03:00  INFO 4328 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 217 a la lista con id 2 
-2022-12-08T19:03:53.526-03:00  INFO 4328 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 218 a la lista con id 2 
-2022-12-08T19:03:54.364-03:00  INFO 4328 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 219 a la lista con id 2 
-2022-12-08T19:03:56.007-03:00  INFO 4328 --- [http-nio-8080-exec-10] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 220 a la lista con id 2 
-2022-12-08T19:04:03.903-03:00  INFO 4328 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 221 a la lista con id 2 
-2022-12-08T19:04:04.905-03:00  INFO 4328 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 222 a la lista con id 2 
-2022-12-08T19:04:05.848-03:00  INFO 4328 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 223 a la lista con id 2 
-2022-12-08T19:04:12.345-03:00  INFO 4328 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 224 a la lista con id 2 
-2022-12-08T19:04:21.991-03:00  INFO 4328 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 2
-2022-12-08T19:07:01.282-03:00  INFO 4328 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 2 
-2022-12-08T19:07:50.678-03:00  INFO 4328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:07:50.685-03:00  INFO 4328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T19:07:50.691-03:00  INFO 4328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T19:07:57.889-03:00  INFO 16108 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 16108 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T19:07:57.892-03:00  INFO 16108 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:07:59.144-03:00  INFO 16108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T19:07:59.315-03:00  INFO 16108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 2 JPA repository interfaces.
-2022-12-08T19:08:00.394-03:00  INFO 16108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:08:00.410-03:00  INFO 16108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:08:00.411-03:00  INFO 16108 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:08:00.584-03:00  INFO 16108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:08:00.585-03:00  INFO 16108 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2577 ms
-2022-12-08T19:08:00.921-03:00  INFO 16108 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T19:08:01.031-03:00  INFO 16108 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T19:08:01.370-03:00  WARN 16108 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T19:08:01.568-03:00  INFO 16108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T19:08:01.955-03:00  INFO 16108 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T19:08:01.958-03:00  INFO 16108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T19:08:02.021-03:00  INFO 16108 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T19:08:03.371-03:00  INFO 16108 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T19:08:03.383-03:00  INFO 16108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:08:04.115-03:00  WARN 16108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T19:08:04.569-03:00  WARN 16108 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T19:08:04.755-03:00  INFO 16108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T19:08:04.765-03:00  INFO 16108 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.633 seconds (process running for 8.217)
-2022-12-08T19:08:12.055-03:00  INFO 16108 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T19:08:12.055-03:00  INFO 16108 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T19:08:12.057-03:00  INFO 16108 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-12-08T19:08:12.118-03:00  INFO 16108 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 2 
-2022-12-08T19:08:14.722-03:00  INFO 16108 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 2 
-2022-12-08T19:08:22.940-03:00  INFO 16108 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 2
-2022-12-08T19:09:07.333-03:00  INFO 16108 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
-2022-12-08T19:09:49.477-03:00  INFO 16108 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 225 a la lista con id 102 
-2022-12-08T19:09:51.333-03:00  INFO 16108 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 226 a la lista con id 102 
-2022-12-08T19:10:14.299-03:00  INFO 16108 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 102 
-2022-12-08T19:10:38.043-03:00  INFO 16108 --- [http-nio-8080-exec-10] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 202 a la lista con id 102 
-2022-12-08T19:10:40.066-03:00 ERROR 16108 --- [http-nio-8080-exec-1] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T19:10:43.764-03:00  INFO 16108 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 204 a la lista con id 102 
-2022-12-08T19:10:44.846-03:00  INFO 16108 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 205 a la lista con id 102 
-2022-12-08T19:10:45.881-03:00  INFO 16108 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 206 a la lista con id 102 
-2022-12-08T19:10:49.008-03:00  INFO 16108 --- [http-nio-8080-exec-5] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 206 a la lista con id 102 
-2022-12-08T19:10:50.569-03:00  INFO 16108 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 207 a la lista con id 102 
-2022-12-08T19:10:51.647-03:00  INFO 16108 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 208 a la lista con id 102 
-2022-12-08T19:10:52.631-03:00  INFO 16108 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 209 a la lista con id 102 
-2022-12-08T19:10:53.967-03:00  INFO 16108 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 210 a la lista con id 102 
-2022-12-08T19:10:55.166-03:00  INFO 16108 --- [http-nio-8080-exec-10] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 211 a la lista con id 102 
-2022-12-08T19:10:55.942-03:00  INFO 16108 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 212 a la lista con id 102 
-2022-12-08T19:10:56.639-03:00  INFO 16108 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 213 a la lista con id 102 
-2022-12-08T19:11:05.288-03:00  INFO 16108 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 214 a la lista con id 102 
-2022-12-08T19:11:12.604-03:00  INFO 16108 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 215 a la lista con id 102 
-2022-12-08T19:11:13.790-03:00  INFO 16108 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 216 a la lista con id 102 
-2022-12-08T19:11:15.178-03:00  INFO 16108 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 217 a la lista con id 102 
-2022-12-08T19:11:16.440-03:00  INFO 16108 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 218 a la lista con id 102 
-2022-12-08T19:11:17.499-03:00  INFO 16108 --- [http-nio-8080-exec-10] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 219 a la lista con id 102 
-2022-12-08T19:11:19.753-03:00  INFO 16108 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 220 a la lista con id 102 
-2022-12-08T19:11:21.233-03:00  INFO 16108 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 221 a la lista con id 102 
-2022-12-08T19:11:22.708-03:00  INFO 16108 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 222 a la lista con id 102 
-2022-12-08T19:11:23.785-03:00  INFO 16108 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 223 a la lista con id 102 
-2022-12-08T19:11:35.867-03:00  INFO 16108 --- [http-nio-8080-exec-6] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 102
-2022-12-08T19:11:38.888-03:00  INFO 16108 --- [http-nio-8080-exec-7] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 102
-2022-12-08T19:11:43.335-03:00  INFO 16108 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se cambió el estado de la lista con id 102
-2022-12-08T19:11:49.655-03:00  INFO 16108 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se encontró la lista con id 102 
-2022-12-08T19:59:19.110-03:00  INFO 16108 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:59:19.122-03:00  INFO 16108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T19:59:19.128-03:00  INFO 16108 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T19:59:29.224-03:00  INFO 11500 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 11500 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T19:59:29.227-03:00  INFO 11500 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T19:59:30.207-03:00  INFO 11500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T19:59:30.310-03:00  INFO 11500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
-2022-12-08T19:59:31.235-03:00  INFO 11500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T19:59:31.255-03:00  INFO 11500 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T19:59:31.256-03:00  INFO 11500 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T19:59:31.418-03:00  INFO 11500 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T19:59:31.419-03:00  INFO 11500 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2094 ms
-2022-12-08T19:59:31.671-03:00  INFO 11500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T19:59:31.761-03:00  INFO 11500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T19:59:32.020-03:00  WARN 11500 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T19:59:32.161-03:00  INFO 11500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T19:59:32.482-03:00  INFO 11500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T19:59:32.486-03:00  INFO 11500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T19:59:32.556-03:00  INFO 11500 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T19:59:33.668-03:00  INFO 11500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T19:59:33.680-03:00  INFO 11500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T19:59:34.113-03:00  WARN 11500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T19:59:34.469-03:00  WARN 11500 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T19:59:34.618-03:00  INFO 11500 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T19:59:34.627-03:00  INFO 11500 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 6.03 seconds (process running for 7.364)
-2022-12-08T19:59:47.169-03:00  INFO 11500 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T19:59:47.170-03:00  INFO 11500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T19:59:47.173-03:00  INFO 11500 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-12-08T19:59:47.396-03:00  INFO 11500 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : La lista 102 no puede ser DEFINITIVA porque no cumple las condiciones.
-2022-12-08T20:00:28.509-03:00  INFO 11500 --- [http-nio-8080-exec-3] c.a.l.s.lista.impl.ListaServiceImpl      : Se agregó el jugador 224 a la lista con id 102 
-2022-12-08T20:00:33.382-03:00  INFO 11500 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : La lista 102 no puede ser DEFINITIVA porque no cumple las condiciones.
-2022-12-08T20:08:49.504-03:00  INFO 11500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:08:49.510-03:00  INFO 11500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T20:08:49.514-03:00  INFO 11500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T20:12:02.054-03:00  INFO 12840 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 12840 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T20:12:02.057-03:00  INFO 12840 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T20:12:03.161-03:00  INFO 12840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T20:12:03.335-03:00  INFO 12840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 2 JPA repository interfaces.
-2022-12-08T20:12:04.369-03:00  INFO 12840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T20:12:04.387-03:00  INFO 12840 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T20:12:04.388-03:00  INFO 12840 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T20:12:04.573-03:00  INFO 12840 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T20:12:04.573-03:00  INFO 12840 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2450 ms
-2022-12-08T20:12:04.825-03:00  INFO 12840 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T20:12:04.908-03:00  INFO 12840 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T20:12:05.179-03:00  WARN 12840 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T20:12:05.346-03:00  INFO 12840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T20:12:05.664-03:00  INFO 12840 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T20:12:05.667-03:00  INFO 12840 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T20:12:05.718-03:00  INFO 12840 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T20:12:06.903-03:00  INFO 12840 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T20:12:06.912-03:00  INFO 12840 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:12:07.430-03:00  WARN 12840 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T20:12:07.882-03:00  WARN 12840 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T20:12:08.013-03:00  INFO 12840 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T20:12:08.024-03:00  INFO 12840 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 6.636 seconds (process running for 8.021)
-2022-12-08T20:12:35.149-03:00  INFO 12840 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T20:12:35.151-03:00  INFO 12840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T20:12:35.153-03:00  INFO 12840 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T20:12:35.321-03:00  INFO 12840 --- [http-nio-8080-exec-1] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
-2022-12-08T20:14:30.718-03:00  INFO 12840 --- [http-nio-8080-exec-5] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 5
-2022-12-08T20:14:30.759-03:00 ERROR 12840 --- [http-nio-8080-exec-5] c.a.l.exception.GlobalExceptions         : No se encontró el recurso al que se está queriendo acceder.
-2022-12-08T20:14:47.580-03:00  INFO 12840 --- [http-nio-8080-exec-6] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 6
-2022-12-08T20:15:31.583-03:00  INFO 12840 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:15:31.587-03:00  INFO 12840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T20:15:31.592-03:00  INFO 12840 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T20:15:38.031-03:00  INFO 16184 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 16184 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T20:15:38.035-03:00  INFO 16184 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T20:15:39.208-03:00  INFO 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T20:15:39.327-03:00  INFO 16184 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
-2022-12-08T20:15:40.671-03:00  INFO 16184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T20:15:40.692-03:00  INFO 16184 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T20:15:40.693-03:00  INFO 16184 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T20:15:40.909-03:00  INFO 16184 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T20:15:40.910-03:00  INFO 16184 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2762 ms
-2022-12-08T20:15:41.241-03:00  INFO 16184 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T20:15:41.319-03:00  INFO 16184 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T20:15:41.559-03:00  WARN 16184 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T20:15:41.697-03:00  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T20:15:41.984-03:00  INFO 16184 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T20:15:41.986-03:00  INFO 16184 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T20:15:42.023-03:00  INFO 16184 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T20:15:43.724-03:00  INFO 16184 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T20:15:43.733-03:00  INFO 16184 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:15:44.241-03:00  WARN 16184 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T20:15:44.633-03:00  WARN 16184 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T20:15:44.801-03:00  INFO 16184 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T20:15:44.814-03:00  INFO 16184 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.494 seconds (process running for 7.949)
-2022-12-08T20:15:53.113-03:00  INFO 16184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T20:15:53.115-03:00  INFO 16184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T20:15:53.118-03:00  INFO 16184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T20:16:34.858-03:00  INFO 16184 --- [http-nio-8080-exec-8] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 6
-2022-12-08T20:16:49.074-03:00  INFO 16184 --- [http-nio-8080-exec-7] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:18:52.895-03:00  INFO 16184 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:18:52.899-03:00  INFO 16184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T20:18:52.902-03:00  INFO 16184 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T20:18:58.889-03:00  INFO 13136 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 13136 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T20:18:58.893-03:00  INFO 13136 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T20:18:59.817-03:00  INFO 13136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T20:18:59.906-03:00  INFO 13136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
-2022-12-08T20:19:00.806-03:00  INFO 13136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T20:19:00.823-03:00  INFO 13136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T20:19:00.824-03:00  INFO 13136 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T20:19:00.993-03:00  INFO 13136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T20:19:00.995-03:00  INFO 13136 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2004 ms
-2022-12-08T20:19:01.331-03:00  INFO 13136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T20:19:01.401-03:00  INFO 13136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T20:19:01.650-03:00  WARN 13136 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T20:19:01.775-03:00  INFO 13136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T20:19:02.044-03:00  INFO 13136 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T20:19:02.047-03:00  INFO 13136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T20:19:02.087-03:00  INFO 13136 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T20:19:03.046-03:00  INFO 13136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T20:19:03.055-03:00  INFO 13136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:19:03.533-03:00  WARN 13136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T20:19:03.855-03:00  WARN 13136 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T20:19:03.963-03:00  INFO 13136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T20:19:03.973-03:00  INFO 13136 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 5.775 seconds (process running for 6.27)
-2022-12-08T20:19:31.677-03:00  INFO 13136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T20:19:31.677-03:00  INFO 13136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T20:19:31.679-03:00  INFO 13136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-12-08T20:19:31.732-03:00  INFO 13136 --- [http-nio-8080-exec-1] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:19:35.632-03:00  INFO 13136 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 6
-2022-12-08T20:19:38.866-03:00  INFO 13136 --- [http-nio-8080-exec-3] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:40:28.042-03:00  INFO 13136 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:40:28.046-03:00  INFO 13136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T20:40:28.059-03:00  INFO 13136 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-12-08T20:40:33.049-03:00  INFO 2880 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 2880 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
-2022-12-08T20:40:33.053-03:00  INFO 2880 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
-2022-12-08T20:40:34.134-03:00  INFO 2880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-12-08T20:40:34.265-03:00  INFO 2880 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
-2022-12-08T20:40:35.645-03:00  INFO 2880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-12-08T20:40:35.660-03:00  INFO 2880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-12-08T20:40:35.661-03:00  INFO 2880 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
-2022-12-08T20:40:35.838-03:00  INFO 2880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-12-08T20:40:35.839-03:00  INFO 2880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2702 ms
-2022-12-08T20:40:36.104-03:00  INFO 2880 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-12-08T20:40:36.169-03:00  INFO 2880 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
-2022-12-08T20:40:36.385-03:00  WARN 2880 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2022-12-08T20:40:36.514-03:00  INFO 2880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-12-08T20:40:36.856-03:00  INFO 2880 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
-2022-12-08T20:40:36.858-03:00  INFO 2880 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-12-08T20:40:36.899-03:00  INFO 2880 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-12-08T20:40:38.198-03:00  INFO 2880 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-12-08T20:40:38.210-03:00  INFO 2880 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:40:39.065-03:00  WARN 2880 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-12-08T20:40:39.846-03:00  WARN 2880 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-2022-12-08T20:40:40.043-03:00  INFO 2880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-12-08T20:40:40.053-03:00  INFO 2880 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.658 seconds (process running for 8.183)
-2022-12-08T20:40:43.793-03:00  INFO 2880 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-12-08T20:40:43.794-03:00  INFO 2880 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-12-08T20:40:43.796-03:00  INFO 2880 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-12-08T20:40:43.852-03:00  INFO 2880 --- [http-nio-8080-exec-2] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:41:24.352-03:00  INFO 2880 --- [http-nio-8080-exec-3] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 6
-2022-12-08T20:41:33.094-03:00  INFO 2880 --- [http-nio-8080-exec-4] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:41:44.114-03:00  INFO 2880 --- [http-nio-8080-exec-5] c.a.l.c.jugador.JugadorController        : Se actualizó el jugador con id 6
-2022-12-08T20:41:46.714-03:00  INFO 2880 --- [http-nio-8080-exec-6] c.a.l.c.jugador.JugadorController        : Se encontró el jugador con id 6 
-2022-12-08T20:45:38.564-03:00  INFO 2880 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-12-08T20:45:38.567-03:00  INFO 2880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-12-08T20:45:38.570-03:00  INFO 2880 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-09T13:23:30.436-03:00  INFO 13964 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 13964 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-09T13:23:30.439-03:00  INFO 13964 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T13:23:31.728-03:00  INFO 13964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-09T13:23:31.865-03:00  INFO 13964 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 2 JPA repository interfaces.
+2022-12-09T13:23:33.004-03:00  INFO 13964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T13:23:33.020-03:00  INFO 13964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T13:23:33.021-03:00  INFO 13964 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T13:23:33.192-03:00  INFO 13964 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T13:23:33.193-03:00  INFO 13964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2639 ms
+2022-12-09T13:23:33.444-03:00  INFO 13964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-09T13:23:33.845-03:00  INFO 13964 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-09T13:23:33.848-03:00  INFO 13964 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-09T13:23:34.028-03:00  INFO 13964 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-09T13:23:34.120-03:00  INFO 13964 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-09T13:23:34.343-03:00  WARN 13964 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-09T13:23:34.617-03:00  INFO 13964 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-09T13:23:35.926-03:00  INFO 13964 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-09T13:23:35.936-03:00  INFO 13964 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T13:23:36.465-03:00  WARN 13964 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-09T13:23:36.977-03:00  WARN 13964 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-09T13:23:37.189-03:00  INFO 13964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T13:23:37.222-03:00  INFO 13964 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 7.573 seconds (process running for 8.234)
+2022-12-09T13:26:09.052-03:00  INFO 13964 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T13:26:09.053-03:00  INFO 13964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T13:26:09.058-03:00  INFO 13964 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-12-09T13:26:09.114-03:00  WARN 13964 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "deleteAll"]
+2022-12-09T13:26:23.204-03:00  WARN 13964 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "deleteAll"]
+2022-12-09T13:27:23.682-03:00  INFO 13964 --- [http-nio-8080-exec-9] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
+2022-12-09T13:27:28.621-03:00 ERROR 13964 --- [http-nio-8080-exec-10] c.a.l.exception.GlobalExceptions         : Sólo puede existir una lista, así que no se pudo crear una nueva.
+2022-12-09T13:27:57.086-03:00  INFO 13964 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T13:27:57.094-03:00  INFO 13964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-09T13:27:57.114-03:00  INFO 13964 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-09T13:28:02.786-03:00  INFO 9484 --- [main] c.a.lista2026.Lista2026Application       : Starting Lista2026Application using Java 18.0.1.1 with PID 9484 (C:\proyecto-itr\BackEnd\lista2026\target\classes started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-09T13:28:02.791-03:00  INFO 9484 --- [main] c.a.lista2026.Lista2026Application       : No active profile set, falling back to 1 default profile: "default"
+2022-12-09T13:28:03.846-03:00  INFO 9484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-09T13:28:03.963-03:00  INFO 9484 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+2022-12-09T13:28:04.915-03:00  INFO 9484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-12-09T13:28:04.930-03:00  INFO 9484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-09T13:28:04.930-03:00  INFO 9484 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2022-12-09T13:28:05.082-03:00  INFO 9484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-09T13:28:05.083-03:00  INFO 9484 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2205 ms
+2022-12-09T13:28:05.222-03:00  INFO 9484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-09T13:28:05.589-03:00  INFO 9484 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-09T13:28:05.591-03:00  INFO 9484 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-09T13:28:05.745-03:00  INFO 9484 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-09T13:28:05.822-03:00  INFO 9484 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-09T13:28:06.027-03:00  WARN 9484 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-09T13:28:06.240-03:00  INFO 9484 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-09T13:28:07.417-03:00  INFO 9484 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-09T13:28:07.427-03:00  INFO 9484 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T13:28:07.964-03:00  WARN 9484 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-09T13:28:08.337-03:00  WARN 9484 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-09T13:28:08.470-03:00  INFO 9484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-12-09T13:28:08.483-03:00  INFO 9484 --- [main] c.a.lista2026.Lista2026Application       : Started Lista2026Application in 6.389 seconds (process running for 6.904)
+2022-12-09T13:28:18.001-03:00  INFO 9484 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-09T13:28:18.002-03:00  INFO 9484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-09T13:28:18.004-03:00  INFO 9484 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-09T13:28:27.448-03:00  INFO 9484 --- [http-nio-8080-exec-4] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
+2022-12-09T13:28:30.560-03:00 ERROR 9484 --- [http-nio-8080-exec-6] c.a.l.exception.GlobalExceptions         : Sólo puede existir una lista, así que no se pudo crear una nueva.
+2022-12-09T13:28:37.852-03:00 ERROR 9484 --- [http-nio-8080-exec-8] c.a.l.exception.GlobalExceptions         : Sólo puede existir una lista, así que no se pudo crear una nueva.
+2022-12-09T13:28:50.456-03:00  INFO 9484 --- [http-nio-8080-exec-2] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
+2022-12-09T13:28:57.228-03:00 ERROR 9484 --- [http-nio-8080-exec-4] c.a.l.exception.GlobalExceptions         : Sólo puede existir una lista, así que no se pudo crear una nueva.
+2022-12-09T13:29:05.607-03:00  INFO 9484 --- [http-nio-8080-exec-8] c.a.l.s.lista.impl.ListaServiceImpl      : Se creó una nueva lista
+2022-12-09T14:04:46.809-03:00 ERROR 9484 --- [http-nio-8080-exec-7] c.a.l.exception.GlobalExceptions         : Sólo puede existir una lista, así que no se pudo crear una nueva.
+2022-12-09T14:14:40.816-03:00  INFO 9484 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-09T14:14:40.830-03:00  INFO 9484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-09T14:14:40.835-03:00  INFO 9484 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
