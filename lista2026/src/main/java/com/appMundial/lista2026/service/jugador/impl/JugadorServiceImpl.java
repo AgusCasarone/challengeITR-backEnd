@@ -6,6 +6,7 @@ import com.appMundial.lista2026.dto.jugador.JugadorDto;
 import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.repository.jugador.JugadorRepository;
+import com.appMundial.lista2026.service.jugador.JugadorService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import java.util.Optional;
 
 
 @Service
-public class JugadorServiceImpl {
+public class JugadorServiceImpl implements JugadorService {
 
     private static final Logger LOGGER = LogManager.getLogger(JugadorServiceImpl.class);
 
@@ -91,7 +92,7 @@ public class JugadorServiceImpl {
         jugadorRepository.deleteAll();
     }
 
-    private Jugador parseJugadorDtoToEntity(JugadorDto jugadorDto) {
+    public Jugador parseJugadorDtoToEntity(JugadorDto jugadorDto) {
 
         Jugador jugadorEntity = new Jugador();
 
