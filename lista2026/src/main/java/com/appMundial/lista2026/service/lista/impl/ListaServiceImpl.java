@@ -3,13 +3,14 @@ package com.appMundial.lista2026.service.lista.impl;
 import com.appMundial.lista2026.dto.lista.ListaDto;
 import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.entity.jugador.Posicion;
-import com.appMundial.lista2026.entity.lista.Estado;
 import com.appMundial.lista2026.entity.lista.Lista;
 import com.appMundial.lista2026.exception.ListaDeJugadoresAlreadyExistsException;
+import com.appMundial.lista2026.exception.NoLongerFINALException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.repository.lista.ListaRepository;
 import com.appMundial.lista2026.service.jugador.impl.JugadorServiceImpl;
 import com.appMundial.lista2026.service.lista.ListaService;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+
+import static com.appMundial.lista2026.entity.lista.Estado.DEFINITIVA;
+import static com.appMundial.lista2026.entity.lista.Estado.ENPROCESO;
 
 @Service
 public class ListaServiceImpl implements ListaService {
@@ -34,13 +39,14 @@ public class ListaServiceImpl implements ListaService {
     public Lista addLista(ListaDto listaDto) throws ListaDeJugadoresAlreadyExistsException {
         Lista listaEntity = paseListaDtoToEntity(listaDto);
 
-        // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE LISTA TO BE CREATED
+        // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE LISTA TO BE CREATED v
         if (listaRepository.findAll().size() > 0) {
             ListaDeJugadoresAlreadyExistsException e = new ListaDeJugadoresAlreadyExistsException("Ya hay una lista en la base de datos");
             throw e;
         }
+        // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE LISTA TO BE CREATED ^
 
-        listaEntity.setEstado(Estado.ENPROCESO);
+        listaEntity.setEstado(ENPROCESO);
 
         LOGGER.info("Se creó una nueva lista");
         return listaRepository.save(listaEntity);
@@ -75,17 +81,34 @@ public class ListaServiceImpl implements ListaService {
     }
 
     @Override
-    public Lista addJugadorALista(Integer idLista, Integer idJugador) throws ResourceNotFoundException {
+    public Lista addJugadorALista(Integer idLista, Integer idJugador) throws ResourceNotFoundException, NoLongerFINALException {
 
         Lista listaOriginal = listaRepository.findById(idLista).orElseThrow(()-> new  ResourceNotFoundException("No se encontró la lista."));
         Jugador jugador = jugadorRepository.findJugadorById(idJugador).orElseThrow(()->new ResourceNotFoundException("No se encontró el jugador."));
 
         listaOriginal.getJugadores().add(jugador);
+        if (amountOfJugadoresInLista(idLista) != 23 && listaOriginal.getEstado() == DEFINITIVA){
+            NoLongerFINALException e = new NoLongerFINALException("La lista dejaría de tener 23 jugadores, cambie el estado y vuelva a intentarlo.");
+            throw e;
+        }
 
         listaRepository.save(listaOriginal);
         LOGGER.info(String.format("Se agregó el jugador %s a la lista con id %s ", idJugador, idLista));
 
         return listaOriginal;
+    }
+
+    public Lista removeJugadorFromLista(Integer idLista, Integer idJugador) throws ResourceNotFoundException, NoLongerFINALException {
+        Lista lista = listaRepository.findById(idLista).orElseThrow(() -> new ResourceNotFoundException("No se encontró la lista."));
+
+
+        lista.getJugadores().removeIf(jugador -> jugador.getId().equals(idJugador));
+        if (amountOfJugadoresInLista(idLista) != 23 && lista.getEstado() == DEFINITIVA) {
+            NoLongerFINALException e = new NoLongerFINALException("La lista dejaría de tener 23 jugadores, cambie el estado y vuelva a intentarlo.");
+            throw e;
+        }
+        listaRepository.save(lista);
+        return lista;
     }
 
     @Override
@@ -97,7 +120,8 @@ public class ListaServiceImpl implements ListaService {
 
         if (amountOfJugadoresInLista(idLista) == 23 && atLeastTwoOfEach(idLista)) {
 
-            lista.setEstado(Estado.DEFINITIVA);
+            orderNumbers(idLista);
+            lista.setEstado(DEFINITIVA);
 
             listaRepository.save(lista);
             LOGGER.info(String.format("Se cambió el estado de la lista con id %s", idLista));
@@ -110,6 +134,15 @@ public class ListaServiceImpl implements ListaService {
 
         }
 
+    }
+
+    public Lista makeListaENPROCESO(Integer idLista) throws ResourceNotFoundException {
+        Lista lista = listaRepository.findById(idLista).orElseThrow(()-> new ResourceNotFoundException("No se encontró la lista"));
+
+        lista.setEstado(ENPROCESO);
+        listaRepository.save(lista);
+
+        return lista;
     }
 
     @Override
@@ -162,22 +195,19 @@ public class ListaServiceImpl implements ListaService {
         return isTwoOfEach;
     }
 
-    public boolean sequenceOfTwentythreeJugadorNumero(Integer id) {
+    public void orderNumbers(Integer id) {
 
         boolean hasAllNumbers = false;
 
-        Lista lista = (listaRepository.getById(id)).;
+        Set<Jugador> lista = (listaRepository.getById(id)).getJugadores();
 
-        for (Jugador j : lista.getJugadores()) {
-            if (j.getNumero() > 23){
-                LOGGER.error(String.format("Hay al menos un jugador con un número mayor a 23."));
-                return hasAllNumbers;
-            } else if (j.getNumero()) {
-                
-            }
+        Integer nuevoNumero = 1;
+
+        for(Jugador j : lista){
+
+            j.setNumero(nuevoNumero);
+            nuevoNumero++;
         }
-
-        return hasAllNumbers;
     }
 
     @Override

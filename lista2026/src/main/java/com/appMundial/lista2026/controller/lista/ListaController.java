@@ -3,6 +3,7 @@ package com.appMundial.lista2026.controller.lista;
 import com.appMundial.lista2026.dto.lista.ListaDto;
 import com.appMundial.lista2026.entity.lista.Lista;
 import com.appMundial.lista2026.exception.MissingValuesException;
+import com.appMundial.lista2026.exception.NoLongerFINALException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.lista.impl.ListaServiceImpl;
 import org.apache.logging.log4j.LogManager;
@@ -32,17 +33,25 @@ public class ListaController {
         return ResponseEntity.ok(listaService.findListaById(id));
     }
 
-    @PutMapping (value = "addJugador/{idLista}")
-    public ResponseEntity<ListaDto> addJugadorALaLista(@PathVariable Integer idLista, @RequestParam Integer idJugador) throws MissingValuesException, Exception {
+    @PostMapping (value = "addJugador/{idLista}")
+    public ResponseEntity<ListaDto> addJugadorALaLista(@PathVariable Integer idLista, @RequestParam Integer idJugador) throws MissingValuesException, NoLongerFINALException, Exception {
         return ResponseEntity.ok(listaService.parseListaEntityToDto(listaService.addJugadorALista(idLista, idJugador)));
     }
 
-    @PutMapping (value = "/checkEstado/{idLista}")
-    public ResponseEntity<ListaDto> makeListaEstadoDEFINITIVA(@PathVariable Integer idLista) throws ResourceNotFoundException {
-        return ResponseEntity.ok(listaService.parseListaEntityToDto(listaService.makeListaEstadoDEFINITIVA(idLista)));
-
+    @DeleteMapping (value = "/removeJugador/{idLista}")
+    public ResponseEntity<ListaDto> removeJugadorFromLista(@PathVariable Integer idLista, @RequestParam Integer idJugador) throws ResourceNotFoundException, NoLongerFINALException {
+        return ResponseEntity.ok(listaService.parseListaEntityToDto(listaService.removeJugadorFromLista(idLista,  idJugador)));
     }
 
+    @PutMapping (value = "/makeListaDEFINITIVA/{idLista}")
+    public ResponseEntity<ListaDto> makeListaEstadoDEFINITIVA(@PathVariable Integer idLista) throws ResourceNotFoundException {
+        return ResponseEntity.ok(listaService.parseListaEntityToDto(listaService.makeListaEstadoDEFINITIVA(idLista)));
+    }
+
+    @PutMapping (value = "/makeListaENPROCESO/{idLista}")
+    public ResponseEntity<ListaDto> makeListaENPROCESO(@PathVariable Integer idLista) throws ResourceNotFoundException {
+        return ResponseEntity.ok(listaService.parseListaEntityToDto(listaService.makeListaENPROCESO(idLista)));
+    }
     @DeleteMapping("deleteLista/{id}")
     public ResponseEntity<String> deleteLista(@PathVariable Integer id) throws ResourceNotFoundException, Exception {
         listaService.deleteListaById(id);

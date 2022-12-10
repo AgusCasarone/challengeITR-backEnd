@@ -4,6 +4,7 @@ import com.appMundial.lista2026.dto.lista.ListaDto;
 import com.appMundial.lista2026.entity.jugador.Posicion;
 import com.appMundial.lista2026.entity.lista.Lista;
 import com.appMundial.lista2026.exception.ListaDeJugadoresAlreadyExistsException;
+import com.appMundial.lista2026.exception.NoLongerFINALException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public interface ListaService {
 
     public void deleteAllListasExistentes();
 
-    public Lista addJugadorALista(Integer idLista, Integer idJugador) throws ResourceNotFoundException;
+    public Lista addJugadorALista(Integer idLista, Integer idJugador) throws ResourceNotFoundException, NoLongerFINALException;
 
     public Lista makeListaEstadoDEFINITIVA(Integer idLista) throws ResourceNotFoundException;
 

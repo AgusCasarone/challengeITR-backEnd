@@ -30,5 +30,10 @@ public class GlobalExceptions {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
     }
 
+    @ExceptionHandler({NoLongerFINALException.class})
+    public ResponseEntity<String> procesoNoLongerFINALException(NoLongerFINALException e) {
+        LOGGER.error("La lista ya no cumple las condiciones para ser FINAL y su estado fue cambiado a ENPROCESO.");
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body((e.getMessage()));
+    }
 
 }
