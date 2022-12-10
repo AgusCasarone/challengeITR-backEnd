@@ -10,7 +10,6 @@ import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.repository.lista.ListaRepository;
 import com.appMundial.lista2026.service.jugador.impl.JugadorServiceImpl;
 import com.appMundial.lista2026.service.lista.ListaService;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

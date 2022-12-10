@@ -1,7 +1,5 @@
 package com.appMundial.lista2026.service.jugador.impl;
 
-
-import com.appMundial.lista2026.controller.jugador.JugadorController;
 import com.appMundial.lista2026.dto.jugador.JugadorDto;
 import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
@@ -18,7 +16,6 @@ import java.util.Optional;
 
 @Service
 public class JugadorServiceImpl implements JugadorService {
-
     private static final Logger LOGGER = LogManager.getLogger(JugadorServiceImpl.class);
 
     @Autowired

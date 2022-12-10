@@ -18,6 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/jugadores")
+@CrossOrigin("*")
 public class JugadorController {
 
     private static final Logger LOGGER = LogManager.getLogger(JugadorController.class);

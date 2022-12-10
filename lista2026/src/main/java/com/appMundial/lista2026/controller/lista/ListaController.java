@@ -6,8 +6,6 @@ import com.appMundial.lista2026.exception.MissingValuesException;
 import com.appMundial.lista2026.exception.NoLongerFINALException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.lista.impl.ListaServiceImpl;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/listas")
+@CrossOrigin("*")
 public class ListaController {
 
     @Autowired
