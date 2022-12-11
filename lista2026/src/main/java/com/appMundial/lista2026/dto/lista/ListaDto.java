@@ -16,6 +16,19 @@ public class ListaDto {
     public ListaDto() {
     }
 
+    public ListaDto(Integer id, Estado estado, Set<Jugador> jugadores, String nombre) {
+        this.id = id;
+        this.estado = estado;
+        this.jugadores = jugadores;
+        this.nombre = nombre;
+    }
+
+    public ListaDto(Estado estado, Set<Jugador> jugadores, String nombre) {
+        this.estado = estado;
+        this.jugadores = jugadores;
+        this.nombre = nombre;
+    }
+
     public Integer getId() {
         return id;
     }

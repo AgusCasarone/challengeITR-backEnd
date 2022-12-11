@@ -40,7 +40,8 @@ public class JugadorServiceImpl implements JugadorService {
 
     public Jugador updateJugador(JugadorDto jugadorDtoEddit, Integer id) throws ResourceNotFoundException {
 
-        JugadorDto jugadorDtoOriginal = parseJugadorEntityToDto(jugadorRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("No se encontró el jugador")));
+        JugadorDto jugadorDtoOriginal = parseJugadorEntityToDto(jugadorRepository.findById(id).
+                orElseThrow(()-> new ResourceNotFoundException("No se encontró el jugador")));
 
         if (jugadorDtoEddit.getNombre() != null){
             jugadorDtoOriginal.setNombre(jugadorDtoEddit.getNombre());

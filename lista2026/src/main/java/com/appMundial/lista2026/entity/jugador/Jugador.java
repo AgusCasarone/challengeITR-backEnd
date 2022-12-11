@@ -35,17 +35,6 @@ public class Jugador {
     public Jugador() {
     }
 
-    public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero, List<Lista> listas) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.equipo = equipo;
-        this.posicion = posicion;
-        this.numero = numero;
-        this.listas = listas;
-    }
-
     public Jugador(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero) {
         this.id = id;
         this.nombre = nombre;

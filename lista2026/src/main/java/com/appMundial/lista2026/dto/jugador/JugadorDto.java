@@ -17,6 +17,25 @@ public class JugadorDto {
     public JugadorDto() {
     }
 
+    public JugadorDto(String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.equipo = equipo;
+        this.posicion = posicion;
+        this.numero = numero;
+    }
+
+    public JugadorDto(Integer id, String nombre, String apellido, Integer edad, String equipo, List<Posicion> posicion, Integer numero) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.equipo = equipo;
+        this.posicion = posicion;
+        this.numero = numero;
+    }
+
     public Integer getId() {
         return id;
     }

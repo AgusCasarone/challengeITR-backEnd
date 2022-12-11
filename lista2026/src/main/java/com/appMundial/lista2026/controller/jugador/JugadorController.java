@@ -4,7 +4,6 @@ import com.appMundial.lista2026.dto.jugador.JugadorDto;
 import com.appMundial.lista2026.entity.jugador.Jugador;
 import com.appMundial.lista2026.exception.MissingValuesException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
-import com.appMundial.lista2026.service.jugador.JugadorService;
 import com.appMundial.lista2026.service.jugador.impl.JugadorServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
