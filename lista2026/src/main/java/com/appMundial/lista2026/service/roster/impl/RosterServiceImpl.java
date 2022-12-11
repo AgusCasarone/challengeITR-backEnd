@@ -4,9 +4,7 @@ import com.appMundial.lista2026.dto.roster.RosterDto;
 import com.appMundial.lista2026.entity.roster.Roster;
 import com.appMundial.lista2026.entity.player.Player;
 import com.appMundial.lista2026.entity.player.Position;
-import com.appMundial.lista2026.exception.RosterAlreadyExistsException;
-import com.appMundial.lista2026.exception.NoLongerFINALException;
-import com.appMundial.lista2026.exception.ResourceNotFoundException;
+import com.appMundial.lista2026.exception.*;
 import com.appMundial.lista2026.repository.roster.RosterRepository;
 import com.appMundial.lista2026.service.player.impl.PlayerServiceImpl;
 import com.appMundial.lista2026.service.roster.RosterService;
@@ -28,6 +26,18 @@ public class RosterServiceImpl implements RosterService {
 
     private static final Logger LOGGER = LogManager.getLogger(RosterServiceImpl.class);
 
+    private static final String rosterDefinitiva = "Roster with id %s state is now DEFINITIVA";
+    private static final String rosterAlreadyExists = "There already exist a Roster in the Data Base";
+    private static final String rosterFound = "Roster with id %s was found";
+    private static final String newRosterAdded = "New roster added";
+    private static final String rosterDeleted = "Roster with id %s was deleted";
+    private static final String messageRosterNotFound = "Roster not found.";
+    private static final String messagePlayerNotFound = "Player not found.";
+    private static final String errorRosterNot23Players = "FINAL roster should have exactly 23 players.";
+    private static final String messagePlayerAddedToRoster = "Player with id %s added to roster with id %s ";
+    private static final String errorRosterCanNotBeDefinitiva = "Roster with id %s can not be DEFINITIVA due to missing conditions.";
+    private static final String errorTwoPlayersOfEachPosition = "There should be at least two players with position %s";
+
     @Autowired
     private RosterRepository rosterRepository;
 
@@ -40,21 +50,21 @@ public class RosterServiceImpl implements RosterService {
 
         // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE ROSTER TO BE CREATED v
         if (rosterRepository.findAll().size() > 0) {
-            RosterAlreadyExistsException e = new RosterAlreadyExistsException("Ya hay una lista en la base de datos");
+            RosterAlreadyExistsException e = new RosterAlreadyExistsException(rosterAlreadyExists);
             throw e;
         }
         // DELETE THIS VALIDATION TO ALLOW MORE THAN ONE ROSTER TO BE CREATED ^
 
         rosterEntity.setState(ENPROCESO);
 
-        LOGGER.info("New roster added");
-                                                                                                    return rosterRepository.save(rosterEntity);
+        LOGGER.info(newRosterAdded);
+        return rosterRepository.save(rosterEntity);
 
     }
 
     @Override
     public Optional<Roster> findRosterById(Integer id){
-        LOGGER.info(String.format("Roster with id %s was found", id));
+        LOGGER.info(String.format(rosterFound, id));
         return rosterRepository.findById(id);
     }
 
@@ -67,7 +77,7 @@ public class RosterServiceImpl implements RosterService {
     public boolean deleteRosterById(Integer id){
         if (rosterRepository.existsById(id)) {
             rosterRepository.deleteById(id);
-            LOGGER.info(String.format("Roster with id %s was deleted", id));
+            LOGGER.info(String.format(rosterDeleted, id));
             return true;
         } else {
             return false;
@@ -82,39 +92,39 @@ public class RosterServiceImpl implements RosterService {
     @Override
     public Roster addPlayerToRoster(Integer idRoster, Integer idPlayer) throws ResourceNotFoundException, NoLongerFINALException {
 
-        Roster rosterOriginal = rosterRepository.findById(idRoster).orElseThrow(()-> new  ResourceNotFoundException("Roster not found."));
-        Player player = playerService.findPlayerById(idPlayer).orElseThrow(()->new ResourceNotFoundException("Player not found."));
+        Roster rosterOriginal = rosterRepository.findById(idRoster).orElseThrow(()-> new  ResourceNotFoundException(messageRosterNotFound));
+        Player player = playerService.findPlayerById(idPlayer).orElseThrow(()->new ResourceNotFoundException(messagePlayerNotFound));
 
         rosterOriginal.getPlayers().add(player);
-        if (amountOfPlayersInRoster(idRoster) != 23 && rosterOriginal.getState() == DEFINITIVA){
-            NoLongerFINALException e = new NoLongerFINALException("Roster would no longer have 23 players. Change roster.state to ENPROCESO and try again.");
-            throw e;
+        if (rosterOriginal.getState() == DEFINITIVA){
+            LOGGER.error(errorRosterNot23Players);
+            throw new NoLongerFINALException(errorRosterNot23Players);
         }
 
         rosterRepository.save(rosterOriginal);
-        LOGGER.info(String.format("Player with id %s added to roster with id %s ", idPlayer, idRoster));
+        LOGGER.info(String.format(messagePlayerAddedToRoster, idPlayer, idRoster));
 
         return rosterOriginal;
     }
 
     @Override
     public Roster removePlayerFromRoster(Integer idRoster, Integer idPlayer) throws ResourceNotFoundException, NoLongerFINALException {
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(() -> new ResourceNotFoundException("No se encontró la roster."));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(() -> new ResourceNotFoundException(messageRosterNotFound));
 
 
         roster.getPlayers().removeIf(player -> player.getId().equals(idPlayer));
-        if (amountOfPlayersInRoster(idRoster) != 23 && roster.getState() == DEFINITIVA) {
-            NoLongerFINALException e = new NoLongerFINALException("Roster would no longer have 23 players. Change roster.state to ENPROCESO and try again.");
-            throw e;
+        if (roster.getState() == DEFINITIVA) {
+            LOGGER.error(String.format(errorRosterNot23Players));
+            throw new NoLongerFINALException(errorRosterNot23Players);
         }
         rosterRepository.save(roster);
         return roster;
     }
 
     @Override
-    public Roster makeRosterDEFINITIVA(Integer idRoster) throws ResourceNotFoundException {
+    public Roster makeRosterDEFINITIVA(Integer idRoster) throws ResourceNotFoundException, FinalRosterCanNotBeChangedException, RosterCanNotBeFINALException {
 
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException("Roster not found"));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException(messageRosterNotFound));
 
         if (amountOfPlayersInRoster(idRoster) == 23 && atLeastTwoOfEach(idRoster)) {
 
@@ -122,11 +132,11 @@ public class RosterServiceImpl implements RosterService {
             roster.setState(DEFINITIVA);
 
             rosterRepository.save(roster);
-            LOGGER.info(String.format("Roster with id %s state is now DEFINITIVA", idRoster));
+            LOGGER.info(String.format(rosterDefinitiva, idRoster));
 
         } else {
-
-            LOGGER.info(String.format("Roster with id %s can not be DEFINITIVA due to missing conditions.", idRoster));
+            LOGGER.error(errorRosterCanNotBeDefinitiva);
+            throw new FinalRosterCanNotBeChangedException(errorRosterCanNotBeDefinitiva);
 
         }
         return roster;
@@ -135,7 +145,7 @@ public class RosterServiceImpl implements RosterService {
 
     @Override
     public Roster makeRosterENPROCESO(Integer idRoster) throws ResourceNotFoundException {
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException("Roster not found"));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException(messageRosterNotFound));
 
         roster.setState(ENPROCESO);
         rosterRepository.save(roster);
@@ -146,47 +156,48 @@ public class RosterServiceImpl implements RosterService {
     @Override
     public Long amountOfPlayersInRoster(Integer idRoster) throws ResourceNotFoundException {
 
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException("Roster not found"));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException(messageRosterNotFound));
 
         return (long) roster.getPlayers().size();
     }
 
     @Override
     public Long amountOfSamePositionInRoster(Integer idRoster, Position position) throws ResourceNotFoundException {
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException("Roster not found"));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException(messageRosterNotFound));
 
-        return roster.getPlayers().stream().filter(player -> player.getPosicion().equals(position)).count();
+        return roster.getPlayers().stream().filter(player -> player.getPosicion().contains(position)).count();
 
     }
 
     @Override
-    public boolean atLeastTwoOfEach(Integer idRoster) throws ResourceNotFoundException {
+    public boolean atLeastTwoOfEach(Integer idRoster) throws ResourceNotFoundException, RosterCanNotBeFINALException {
 
-        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException("Roster not found"));
+        Roster roster = rosterRepository.findById(idRoster).orElseThrow(()-> new ResourceNotFoundException(messageRosterNotFound));
 
         List<String> missingPositions = new ArrayList<>();
         boolean isTwoOfEach = true;
 
-        if (amountOfSamePositionInRoster(idRoster, Position.ARQUERO) >= 2) {
+        if (amountOfSamePositionInRoster(idRoster, Position.ARQUERO) < 2) {
             missingPositions.add(" ARQUERO ");
             isTwoOfEach = false;
         }
 
-        if (amountOfSamePositionInRoster(idRoster, Position.DEFENSOR) >= 2) {
+        if (amountOfSamePositionInRoster(idRoster, Position.DEFENSOR) < 2) {
             missingPositions.add(" DEFENSOR ");
             isTwoOfEach = false;
         }
-        if (amountOfSamePositionInRoster(idRoster, Position.VOLANTE) >= 2) {
+        if (amountOfSamePositionInRoster(idRoster, Position.VOLANTE) < 2) {
             missingPositions.add(" VOLANTE ");
             isTwoOfEach = false;
         }
-        if (amountOfSamePositionInRoster(idRoster, Position.DELANTERO) >= 2) {
+        if (amountOfSamePositionInRoster(idRoster, Position.DELANTERO) < 2) {
             missingPositions.add(" DELANTERO ");
             isTwoOfEach = false;
         }
 
         if (!isTwoOfEach) {
-            LOGGER.error(String.format("There should be at least two players with position %s", missingPositions));
+            LOGGER.error(String.format(errorTwoPlayersOfEachPosition, missingPositions));
+            throw new RosterCanNotBeFINALException(String.format(errorTwoPlayersOfEachPosition, missingPositions));
         }
 
 

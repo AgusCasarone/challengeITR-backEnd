@@ -3,9 +3,7 @@ package com.appMundial.lista2026.service.roster;
 import com.appMundial.lista2026.dto.roster.RosterDto;
 import com.appMundial.lista2026.entity.player.Position;
 import com.appMundial.lista2026.entity.roster.Roster;
-import com.appMundial.lista2026.exception.RosterAlreadyExistsException;
-import com.appMundial.lista2026.exception.NoLongerFINALException;
-import com.appMundial.lista2026.exception.ResourceNotFoundException;
+import com.appMundial.lista2026.exception.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +24,7 @@ public interface RosterService {
 
     Roster removePlayerFromRoster(Integer idRoster, Integer idPlayer) throws ResourceNotFoundException, NoLongerFINALException;
 
-    public Roster makeRosterDEFINITIVA(Integer idLista) throws ResourceNotFoundException;
+    public Roster makeRosterDEFINITIVA(Integer idLista) throws ResourceNotFoundException, FinalRosterCanNotBeChangedException, RosterCanNotBeFINALException;
 
     Roster makeRosterENPROCESO(Integer idRoster) throws ResourceNotFoundException;
 
@@ -34,7 +32,7 @@ public interface RosterService {
 
     public Long amountOfSamePositionInRoster(Integer idLista, Position position) throws ResourceNotFoundException;
 
-    public boolean atLeastTwoOfEach(Integer idLista) throws ResourceNotFoundException;
+    public boolean atLeastTwoOfEach(Integer idLista) throws ResourceNotFoundException, RosterCanNotBeFINALException;
 
     void orderNumbers(Integer id);
 

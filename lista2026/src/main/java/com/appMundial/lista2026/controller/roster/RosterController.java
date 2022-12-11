@@ -2,9 +2,7 @@ package com.appMundial.lista2026.controller.roster;
 
 import com.appMundial.lista2026.dto.roster.RosterDto;
 import com.appMundial.lista2026.entity.roster.Roster;
-import com.appMundial.lista2026.exception.MissingValuesException;
-import com.appMundial.lista2026.exception.NoLongerFINALException;
-import com.appMundial.lista2026.exception.ResourceNotFoundException;
+import com.appMundial.lista2026.exception.*;
 import com.appMundial.lista2026.service.roster.impl.RosterServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -43,7 +41,7 @@ public class RosterController {
     }
 
     @PutMapping (value = "/makeRosterDEFINITIVA/{idRoster}")
-    public ResponseEntity<RosterDto> makeRosterDEFINITIVA(@PathVariable Integer idRoster) throws ResourceNotFoundException {
+    public ResponseEntity<RosterDto> makeRosterDEFINITIVA(@PathVariable Integer idRoster) throws ResourceNotFoundException, FinalRosterCanNotBeChangedException, RosterCanNotBeFINALException {
         return ResponseEntity.ok(rosterService.parseRosterEntityToDto(rosterService.makeRosterDEFINITIVA(idRoster)));
     }
 
