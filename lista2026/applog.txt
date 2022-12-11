@@ -2191,3 +2191,252 @@ Examples of correct usage of @InjectMocks:
 2022-12-11T17:36:00.301-03:00  INFO 13816 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-12-11T17:36:00.309-03:00  INFO 13816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-12-11T17:36:00.312-03:00  INFO 13816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-11T17:59:19.676-03:00  INFO 11784 --- [main] c.a.l.service.roster.RosterServiceTest   : Starting RosterServiceTest using Java 18.0.1.1 with PID 11784 (started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-11T17:59:19.679-03:00  INFO 11784 --- [main] c.a.l.service.roster.RosterServiceTest   : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T17:59:20.751-03:00  INFO 11784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-11T17:59:20.851-03:00  INFO 11784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2022-12-11T17:59:21.517-03:00  INFO 11784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-11T17:59:21.848-03:00  INFO 11784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-11T17:59:21.851-03:00  INFO 11784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-11T17:59:22.021-03:00  INFO 11784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-11T17:59:22.109-03:00  INFO 11784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-11T17:59:22.436-03:00  WARN 11784 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-11T17:59:22.817-03:00  INFO 11784 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-11T17:59:24.238-03:00  INFO 11784 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-11T17:59:24.254-03:00  INFO 11784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T17:59:25.017-03:00  WARN 11784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-11T17:59:25.516-03:00  WARN 11784 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-11T17:59:25.667-03:00  INFO 11784 --- [main] c.a.l.service.roster.RosterServiceTest   : Started RosterServiceTest in 6.493 seconds (process running for 8.015)
+2022-12-11T17:59:26.182-03:00  INFO 11784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T17:59:26.188-03:00  INFO 11784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-11T17:59:26.196-03:00  INFO 11784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-11T17:59:41.501-03:00  INFO 9500 --- [main] c.a.l.Roster2026ApplicationTests         : Starting Roster2026ApplicationTests using Java 18.0.1.1 with PID 9500 (started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-11T17:59:41.508-03:00  INFO 9500 --- [main] c.a.l.Roster2026ApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T17:59:44.456-03:00  INFO 9500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-11T17:59:44.675-03:00  INFO 9500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187 ms. Found 2 JPA repository interfaces.
+2022-12-11T17:59:45.975-03:00  INFO 9500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-11T17:59:47.581-03:00  INFO 9500 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-11T17:59:47.594-03:00  INFO 9500 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-11T17:59:48.044-03:00  INFO 9500 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-11T17:59:48.434-03:00  INFO 9500 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-11T17:59:49.333-03:00  WARN 9500 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-11T17:59:50.222-03:00  INFO 9500 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-11T17:59:52.733-03:00  INFO 9500 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-11T17:59:52.761-03:00  INFO 9500 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T17:59:54.204-03:00  WARN 9500 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-11T17:59:55.382-03:00  WARN 9500 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-11T17:59:55.626-03:00  INFO 9500 --- [main] c.a.l.Roster2026ApplicationTests         : Started Roster2026ApplicationTests in 15.383 seconds (process running for 19.958)
+2022-12-11T17:59:56.328-03:00  INFO 9500 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.player.PlayerServiceImplTest]: PlayerServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T17:59:56.353-03:00  INFO 9500 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.player.PlayerServiceImplTest
+2022-12-11T17:59:56.378-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T17:59:56.831-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 1 was updated
+2022-12-11T17:59:56.870-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T17:59:56.929-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T17:59:57.994-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 2 was found
+2022-12-11T17:59:58.025-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T17:59:58.046-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 203 was deleted
+2022-12-11T17:59:58.065-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 203 was found
+2022-12-11T17:59:58.075-03:00  INFO 9500 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 12 was found
+2022-12-11T17:59:58.110-03:00  INFO 9500 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.roster.RosterServiceTest]: RosterServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T17:59:58.131-03:00  INFO 9500 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.roster.RosterServiceTest
+2022-12-11T17:59:58.451-03:00  INFO 9500 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : New roster added
+2022-12-11T17:59:58.475-03:00  INFO 9500 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : Roster with id 1 was found
+2022-12-11T17:59:58.561-03:00  INFO 9500 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T17:59:58.583-03:00  INFO 9500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-11T17:59:58.651-03:00  INFO 9500 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-11T18:16:52.466-03:00  INFO 12728 --- [main] c.a.l.Roster2026ApplicationTests         : Starting Roster2026ApplicationTests using Java 18.0.1.1 with PID 12728 (started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-11T18:16:52.468-03:00  INFO 12728 --- [main] c.a.l.Roster2026ApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T18:16:53.785-03:00  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-11T18:16:53.920-03:00  INFO 12728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2022-12-11T18:16:54.643-03:00  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-11T18:16:55.117-03:00  INFO 12728 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-11T18:16:55.120-03:00  INFO 12728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-11T18:16:55.377-03:00  INFO 12728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-11T18:16:55.513-03:00  INFO 12728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-11T18:16:55.896-03:00  WARN 12728 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-11T18:16:56.316-03:00  INFO 12728 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-11T18:16:57.651-03:00  INFO 12728 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-11T18:16:57.665-03:00  INFO 12728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:16:58.851-03:00  WARN 12728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-11T18:16:59.457-03:00  WARN 12728 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-11T18:16:59.772-03:00  INFO 12728 --- [main] c.a.l.Roster2026ApplicationTests         : Started Roster2026ApplicationTests in 7.789 seconds (process running for 10.176)
+2022-12-11T18:17:00.241-03:00  INFO 12728 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.player.PlayerServiceImplTest]: PlayerServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T18:17:00.263-03:00  INFO 12728 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.player.PlayerServiceImplTest
+2022-12-11T18:17:00.282-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:00.482-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 1 was updated
+2022-12-11T18:17:00.504-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:00.546-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:01.311-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 2 was found
+2022-12-11T18:17:01.333-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:01.350-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 253 was deleted
+2022-12-11T18:17:01.363-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 253 was found
+2022-12-11T18:17:01.382-03:00  INFO 12728 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 12 was found
+2022-12-11T18:17:01.424-03:00  INFO 12728 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.roster.RosterServiceTest]: RosterServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T18:17:01.441-03:00  INFO 12728 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.roster.RosterServiceTest
+2022-12-11T18:17:01.698-03:00  INFO 12728 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : New roster added
+2022-12-11T18:17:01.717-03:00  INFO 12728 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : Roster with id 1 was found
+2022-12-11T18:17:01.758-03:00  INFO 12728 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:17:01.774-03:00  INFO 12728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-11T18:17:01.784-03:00  INFO 12728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-11T18:17:16.935-03:00  INFO 1480 --- [main] c.a.l.s.player.PlayerServiceImplTest     : Starting PlayerServiceImplTest using Java 18.0.1.1 with PID 1480 (started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-11T18:17:16.937-03:00  INFO 1480 --- [main] c.a.l.s.player.PlayerServiceImplTest     : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T18:17:18.207-03:00  INFO 1480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-11T18:17:18.341-03:00  INFO 1480 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 2 JPA repository interfaces.
+2022-12-11T18:17:19.077-03:00  INFO 1480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-11T18:17:19.440-03:00  INFO 1480 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-11T18:17:19.443-03:00  INFO 1480 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-11T18:17:19.700-03:00  INFO 1480 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-11T18:17:19.818-03:00  INFO 1480 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-11T18:17:20.090-03:00  WARN 1480 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-11T18:17:20.399-03:00  INFO 1480 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-11T18:17:21.673-03:00  INFO 1480 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-11T18:17:21.687-03:00  INFO 1480 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:17:22.583-03:00  WARN 1480 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-11T18:17:23.087-03:00  WARN 1480 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-11T18:17:23.253-03:00  INFO 1480 --- [main] c.a.l.s.player.PlayerServiceImplTest     : Started PlayerServiceImplTest in 6.853 seconds (process running for 8.77)
+2022-12-11T18:17:23.594-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:23.825-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 1 was updated
+2022-12-11T18:17:23.862-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:23.898-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:24.463-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 2 was found
+2022-12-11T18:17:24.486-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:24.500-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 303 was deleted
+2022-12-11T18:17:24.530-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 303 was found
+2022-12-11T18:17:24.559-03:00  INFO 1480 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 12 was found
+2022-12-11T18:17:24.598-03:00  INFO 1480 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.roster.RosterServiceTest]: RosterServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T18:17:24.622-03:00  INFO 1480 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.roster.RosterServiceTest
+2022-12-11T18:17:24.942-03:00  INFO 1480 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : New roster added
+2022-12-11T18:17:24.966-03:00  INFO 1480 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : Roster with id 1 was found
+2022-12-11T18:17:25.011-03:00  INFO 1480 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:17:25.020-03:00  INFO 1480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-11T18:17:25.026-03:00  INFO 1480 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-12-11T18:17:41.286-03:00  INFO 14876 --- [main] c.a.l.Roster2026ApplicationTests         : Starting Roster2026ApplicationTests using Java 18.0.1.1 with PID 14876 (started by Agus in C:\proyecto-itr\BackEnd\lista2026)
+2022-12-11T18:17:41.293-03:00  INFO 14876 --- [main] c.a.l.Roster2026ApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2022-12-11T18:17:43.816-03:00  INFO 14876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-12-11T18:17:44.008-03:00  INFO 14876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+2022-12-11T18:17:45.230-03:00  INFO 14876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-12-11T18:17:46.606-03:00  INFO 14876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:~./mundial2026 user=
+2022-12-11T18:17:46.620-03:00  INFO 14876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-12-11T18:17:47.018-03:00  INFO 14876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-12-11T18:17:47.301-03:00  INFO 14876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.5.Final
+2022-12-11T18:17:48.075-03:00  WARN 14876 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2022-12-11T18:17:48.685-03:00  INFO 14876 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-12-11T18:17:50.823-03:00  INFO 14876 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-12-11T18:17:50.841-03:00  INFO 14876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:17:52.044-03:00  WARN 14876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-11T18:17:52.922-03:00  WARN 14876 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2022-12-11T18:17:53.176-03:00  INFO 14876 --- [main] c.a.l.Roster2026ApplicationTests         : Started Roster2026ApplicationTests in 13.121 seconds (process running for 17.162)
+2022-12-11T18:17:53.745-03:00  INFO 14876 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.player.PlayerServiceImplTest]: PlayerServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T18:17:53.768-03:00  INFO 14876 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.player.PlayerServiceImplTest
+2022-12-11T18:17:53.799-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:54.171-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 1 was updated
+2022-12-11T18:17:54.206-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:54.288-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:55.153-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 2 was found
+2022-12-11T18:17:55.166-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : New player:
+ Name: Dibu 
+ Last Name: Martinez 
+ Age: 30 
+ Team: Aston Villa 
+ Position: [VOLANTE, ARQUERO, DELANTERO] 
+ Number: 1 
+2022-12-11T18:17:55.172-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 353 was deleted
+2022-12-11T18:17:55.191-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 353 was found
+2022-12-11T18:17:55.205-03:00  INFO 14876 --- [main] c.a.l.s.player.impl.PlayerServiceImpl    : Player with id 12 was found
+2022-12-11T18:17:55.239-03:00  INFO 14876 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.appMundial.lista2026.service.roster.RosterServiceTest]: RosterServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-12-11T18:17:55.264-03:00  INFO 14876 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.appMundial.lista2026.Roster2026Application for test class com.appMundial.lista2026.service.roster.RosterServiceTest
+2022-12-11T18:17:55.596-03:00  INFO 14876 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : New roster added
+2022-12-11T18:17:55.622-03:00  INFO 14876 --- [main] c.a.l.s.roster.impl.RosterServiceImpl    : Roster with id 1 was found
+2022-12-11T18:17:55.683-03:00  INFO 14876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-12-11T18:17:55.687-03:00  INFO 14876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-12-11T18:17:55.691-03:00  INFO 14876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -109,4 +109,23 @@ public class RosterServiceTest {
         assertEquals(rosterDto.getName() ,result.getName());
     }
 
+    @SneakyThrows
+    @Test
+    void shouldParseRosterEntityToDtoSuccessfully(){
+        //Arrange
+        Integer idRoster = 1;
+        Player player1 = new Player(1,"Dibu", "Martinez", 30, "Aston Villa", java.util.List.of(VOLANTE, ARQUERO, DELANTERO), 1);
+        Set<Player> players = new HashSet<>(List.of(player1));
+        Roster rosterEntity = new Roster(idRoster, ENPROCESO, players, "rosterMocked");
+
+        //Act
+        RosterDto result = rosterService.parseRosterEntityToDto(rosterEntity);
+
+        //Assert
+        assertEquals(rosterEntity.getId() ,result.getId());
+        assertEquals(rosterEntity.getState() ,result.getState());
+        assertEquals(rosterEntity.getPlayers() ,result.getPlayers());
+        assertEquals(rosterEntity.getName() ,result.getName());
+    }
+
 }
