@@ -35,9 +35,14 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public Optional<Player> findPlayerById(Integer id) {
-        LOGGER.info(String.format("Player with id %s was found", id));
-        return playerRepository.findById(id);
+    public Optional<Player> findPlayerById(Integer id) throws ResourceNotFoundException {
+        if (playerRepository.existsById(id)) {
+            LOGGER.info(String.format("Player with id %s was found", id));
+            return playerRepository.findById(id);
+
+        } else {
+            throw new ResourceNotFoundException(String.format("No player with id %s was found", id));
+        }
     }
 
     @Override
@@ -74,13 +79,13 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public boolean deletePlayerById(Integer id){
+    public boolean deletePlayerById(Integer id) throws ResourceNotFoundException {
         if (playerRepository.existsById(id)) {
             LOGGER.info(String.format("Player with id %s was deleted", id));
             playerRepository.deleteById(id);
             return true;
         } else {
-            return false;
+            throw new ResourceNotFoundException(String.format("No player with id %s was found", id));
         }
     }
 

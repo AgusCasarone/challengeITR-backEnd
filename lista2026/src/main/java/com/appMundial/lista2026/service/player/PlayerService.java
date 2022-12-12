@@ -10,11 +10,11 @@ import java.util.Optional;
 public interface PlayerService {
     public Player addPlayer(PlayerDto playerDto);
 
-    public Optional<Player> findPlayerById(Integer id);
+    public Optional<Player> findPlayerById(Integer id) throws ResourceNotFoundException;
 
     public Player updatePlayer(PlayerDto playerDtoEddit, Integer id)throws ResourceNotFoundException;
 
-    public boolean deletePlayerById(Integer id);
+    public boolean deletePlayerById(Integer id) throws ResourceNotFoundException;
 
     public List<Player> listAllPlayers();
 

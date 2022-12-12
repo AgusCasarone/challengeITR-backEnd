@@ -2,6 +2,7 @@ package com.appMundial.lista2026.service.player;
 
 import com.appMundial.lista2026.dto.player.PlayerDto;
 import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.player.impl.PlayerServiceImpl;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.Assertions;
@@ -34,7 +35,7 @@ public class PlayerServiceImplTest {
     }
 
     @Test
-    void findPlayerById() {
+    void findPlayerById() throws ResourceNotFoundException {
         //Arrange
         Integer id = 12;
         PlayerDto playerDto = new PlayerDto(id, "Dibu", "Martinez", 30, "Aston Villa", java.util.List.of(VOLANTE, ARQUERO, DELANTERO), 1);
@@ -68,7 +69,7 @@ public class PlayerServiceImplTest {
     }
 
     @Test
-    void deletePlayerByIdTrue() {
+    void deletePlayerByIdTrue() throws ResourceNotFoundException {
         //Arrange
         PlayerDto playerDto = new PlayerDto("Dibu", "Martinez", 30, "Aston Villa", java.util.List.of(VOLANTE, ARQUERO, DELANTERO), 1);
         Player playerSaved = playerService.addPlayer(playerDto);
@@ -82,7 +83,7 @@ public class PlayerServiceImplTest {
     }
 
     @Test
-    void deletePlayerByIdFalse() {
+    void deletePlayerByIdFalse() throws ResourceNotFoundException {
         //Arrange
         PlayerDto playerDto = new PlayerDto(1, "Dibu", "Martinez", 30, "Aston Villa", java.util.List.of(VOLANTE, ARQUERO, DELANTERO), 1);
         Player playerSaved = playerService.addPlayer(playerDto);
