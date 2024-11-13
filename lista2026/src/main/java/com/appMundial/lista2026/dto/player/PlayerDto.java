@@ -1,6 +1,6 @@
 package com.appMundial.lista2026.dto.player;
 
-import com.appMundial.lista2026.entity.player.Position;
+import com.appMundial.lista2026.dto.player.entity.player.Position;
 
 import java.util.List;
 

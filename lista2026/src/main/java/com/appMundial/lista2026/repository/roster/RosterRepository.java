@@ -1,6 +1,6 @@
 package com.appMundial.lista2026.repository.roster;
 
-import com.appMundial.lista2026.entity.roster.Roster;
+import com.appMundial.lista2026.dto.player.entity.roster.Roster;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,9 +1,8 @@
 package com.appMundial.lista2026.service.roster;
 
-import com.appMundial.lista2026.dto.player.PlayerDto;
 import com.appMundial.lista2026.dto.roster.RosterDto;
-import com.appMundial.lista2026.entity.roster.Roster;
-import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.roster.Roster;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
 import com.appMundial.lista2026.repository.roster.RosterRepository;
 import com.appMundial.lista2026.service.roster.impl.RosterServiceImpl;
 import lombok.SneakyThrows;
@@ -18,8 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 
-import static com.appMundial.lista2026.entity.player.Position.*;
-import static com.appMundial.lista2026.entity.roster.State.ENPROCESO;
+import static com.appMundial.lista2026.dto.player.entity.roster.State.ENPROCESO;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)

@@ -1,7 +1,7 @@
 package com.appMundial.lista2026.service.player;
 
 import com.appMundial.lista2026.dto.player.PlayerDto;
-import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.player.impl.PlayerServiceImpl;
 import lombok.SneakyThrows;
@@ -12,7 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
 
-import static com.appMundial.lista2026.entity.player.Position.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -34,6 +33,7 @@ public class PlayerServiceImplTest {
         assertNotNull(result);
     }
 
+    @SneakyThrows
     @Test
     void findPlayerById() throws ResourceNotFoundException {
         //Arrange
@@ -41,7 +41,7 @@ public class PlayerServiceImplTest {
         PlayerDto playerDto = new PlayerDto(id, "Dibu", "Martinez", 30, "Aston Villa", java.util.List.of(VOLANTE, ARQUERO, DELANTERO), 1);
 
         //Act
-        playerService.findPlayerById(playerDto.getId());
+        playerService.findPlayerById(id);
 
         //Assert
         assertEquals(id, playerDto.getId());

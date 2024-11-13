@@ -1,9 +1,9 @@
 package com.appMundial.lista2026.service.roster.impl;
 
 import com.appMundial.lista2026.dto.roster.RosterDto;
-import com.appMundial.lista2026.entity.roster.Roster;
-import com.appMundial.lista2026.entity.player.Player;
-import com.appMundial.lista2026.entity.player.Position;
+import com.appMundial.lista2026.dto.player.entity.roster.Roster;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.player.Position;
 import com.appMundial.lista2026.exception.*;
 import com.appMundial.lista2026.repository.roster.RosterRepository;
 import com.appMundial.lista2026.service.player.impl.PlayerServiceImpl;
@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static com.appMundial.lista2026.entity.roster.State.DEFINITIVA;
-import static com.appMundial.lista2026.entity.roster.State.ENPROCESO;
+import static com.appMundial.lista2026.dto.player.entity.roster.State.DEFINITIVA;
+import static com.appMundial.lista2026.dto.player.entity.roster.State.ENPROCESO;
 
 @Service
 public class RosterServiceImpl implements RosterService {

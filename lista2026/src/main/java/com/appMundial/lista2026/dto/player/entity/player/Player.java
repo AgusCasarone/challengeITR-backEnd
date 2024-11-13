@@ -1,6 +1,6 @@
-package com.appMundial.lista2026.entity.player;
+package com.appMundial.lista2026.dto.player.entity.player;
 
-import com.appMundial.lista2026.entity.roster.Roster;
+import com.appMundial.lista2026.dto.player.entity.roster.Roster;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 

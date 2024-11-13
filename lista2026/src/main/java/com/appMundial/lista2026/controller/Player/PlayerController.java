@@ -1,7 +1,7 @@
 package com.appMundial.lista2026.controller.Player;
 
 import com.appMundial.lista2026.dto.player.PlayerDto;
-import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
 import com.appMundial.lista2026.exception.MissingValuesException;
 import com.appMundial.lista2026.exception.ResourceNotFoundException;
 import com.appMundial.lista2026.service.player.impl.PlayerServiceImpl;

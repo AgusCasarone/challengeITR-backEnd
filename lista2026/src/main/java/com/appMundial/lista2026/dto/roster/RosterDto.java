@@ -1,7 +1,7 @@
 package com.appMundial.lista2026.dto.roster;
 
-import com.appMundial.lista2026.entity.roster.State;
-import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.roster.State;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
 
 import java.util.Set;
 

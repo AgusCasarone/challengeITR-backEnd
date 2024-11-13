@@ -1,6 +1,6 @@
-package com.appMundial.lista2026.entity.roster;
+package com.appMundial.lista2026.dto.player.entity.roster;
 
-import com.appMundial.lista2026.entity.player.Player;
+import com.appMundial.lista2026.dto.player.entity.player.Player;
 import jakarta.persistence.*;
 
 import java.util.Set;

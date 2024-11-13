@@ -1,7 +1,7 @@
 package com.appMundial.lista2026.controller.roster;
 
 import com.appMundial.lista2026.dto.roster.RosterDto;
-import com.appMundial.lista2026.entity.roster.Roster;
+import com.appMundial.lista2026.dto.player.entity.roster.Roster;
 import com.appMundial.lista2026.exception.*;
 import com.appMundial.lista2026.service.roster.impl.RosterServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
